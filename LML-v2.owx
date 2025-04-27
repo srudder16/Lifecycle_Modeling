@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl"
+     xml:base="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguagev2.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl">
+     ontologyIRI="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguagev2.owl">
     <Prefix name="" IRI="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -14,11 +14,8 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>The Lifecycle Modeling Language (LML) was developed to provide a more complete ontology for systems engineering and program management than was available at the time of its creation (October 2013). LML was prototyped and implemented in a commercial tool (Innoslate) beginning in 2012. The specification for 1.1 can be found at www.lifecyclemodelinglanguage.org. This OWL library represents the implemented LML in Innsolate as of June 2017.</Literal>
+        <Literal>The Lifecycle Modeling Language (LML) was developed to provide a more complete ontology for systems engineering and program management than was available at the time of its creation (October 2013). LML was prototyped and implemented in a commercial tool (Innoslate) beginning in 2012. The specification for LML v2.0 can be found at www.lifecyclemodelinglanguage.org. This OWL library represents the implemented LML in Innsolate as of April 2025.</Literal>
     </Annotation>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cost_Risk"/>
-    </Declaration>
     <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Dependency"/>
     </Declaration>
@@ -26,13 +23,7 @@
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Major_Decision"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Schedule_RIsk"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Task"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical_Risk"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Verification_Requirement"/>
@@ -649,10 +640,535 @@
     <Declaration>
         <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#userName"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cost_Risk"/>
-        <Class IRI="#Risk"/>
-    </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="#Action"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#incurs"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#located_at"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurs"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specified_by"/>
+                <Class IRI="#Characteristic"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Action"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references"/>
+            <Class IRI="#Artifact"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#enables"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#incurs"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#located_at"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurs"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#references_by"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#references_by"/>
+                <Class IRI="#Asset"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#results_in"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specified_by"/>
+                <Class IRI="#Characteristic"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#defines_protocol_for"/>
+            <Class IRI="#Connection"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Action"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Asset"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Characteristic"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Connection"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Cost"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Decision"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Risk"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Statement"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Artifact"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#references_by"/>
+            <Class IRI="#Input/Output"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asset"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#connected_by"/>
+                <Class IRI="#Connection"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#incurs"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#located_at"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurs"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#references"/>
+                <Class IRI="#Artifact"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specified_by"/>
+                <Class IRI="#Characteristic"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asset"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#consumed_by"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#performs"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#produced_by"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seized_by"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asset"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causes"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mitigates"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#resolves"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asset"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#enables"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#made"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#responds_to"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#results_in"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asset"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#satisfies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#traced_from"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#verifies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Asset"/>
+            <Class IRI="#Connection"/>
+            <Class IRI="#Input/Output"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causes"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mitigates"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#resolves"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#enables"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#results_in"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#incurs"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#located_at"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurs"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#references"/>
+                <Class IRI="#Artifact"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Artifact"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Characteristic"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#satisfies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specifies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#traced_from"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#verifies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Connection"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#connects_to"/>
+                <Class IRI="#Asset"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#incurs"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#located_at"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurs"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specified_by"/>
+                <Class IRI="#Characteristic"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#transfers"/>
+                <Class IRI="#Input/Output"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Connection"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causes"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mitigates"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#resolves"/>
+                <Class IRI="#Risk"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Connection"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#defined_protocol_by"/>
+                <Class IRI="#Artifact"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#references"/>
+                <Class IRI="#Artifact"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Connection"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#enables"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#results_in"/>
+                <Class IRI="#Decision"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Connection"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#satisfies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#traced_from"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#verifies"/>
+                <Class IRI="#Statement"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Time"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#date_resolves"/>
+                    <Class IRI="#Decision"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#decided_by"/>
+                    <Class IRI="#Decision"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#occurred_by"/>
+                    <Class IRI="#Decision"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mitigates"/>
+                    <Class IRI="#Risk"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#occurred_by"/>
+                    <Class IRI="#Risk"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#occurred_by"/>
+                    <Class IRI="#Characteristic"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#specified_by"/>
+                    <Class IRI="#Characteristic"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#occurred_by"/>
+                    <Class IRI="#Statement"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#satisfies"/>
+                    <Class IRI="#Statement"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#verifies"/>
+                    <Class IRI="#Statement"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurred_by"/>
+                <Class IRI="#Action"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurred_by"/>
+                <Class IRI="#Artifact"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurred_by"/>
+                <Class IRI="#Asset"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurred_by"/>
+                <Class IRI="#Connection"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurred_by"/>
+                <Class IRI="#Cost"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#occurred_by"/>
+                <Class IRI="#Input/Output"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Dependency"/>
         <Class IRI="#Connection"/>
@@ -662,16 +1178,8 @@
         <Class IRI="#Decision"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Schedule_RIsk"/>
-        <Class IRI="#Risk"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Task"/>
         <Class IRI="#Action"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical_Risk"/>
-        <Class IRI="#Risk"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Verification_Requirement"/>
@@ -4489,5 +4997,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
