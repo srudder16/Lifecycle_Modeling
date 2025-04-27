@@ -1,0 +1,1583 @@
+Prefix(:=<http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl>
+Annotation(rdfs:comment "The Lifecycle Modeling Language (LML) was developed to provide a more complete ontology for systems engineering and program management than was available at the time of its creation (October 2013). LML was prototyped and implemented in a commercial tool (Innoslate) beginning in 2012. The specification for 1.1 can be found at www.lifecyclemodelinglanguage.org. This OWL library represents the implemented LML in Innsolate as of June 2017.")
+
+Declaration(Class(:Action))
+Declaration(Class(:Artifact))
+Declaration(Class(:Asset))
+Declaration(Class(:Characteristic))
+Declaration(Class(:Conduit))
+Declaration(Class(:Connection))
+Declaration(Class(:Cost))
+Declaration(Class(:Decision))
+Declaration(Class(:Equation))
+Declaration(Class(:Location))
+Declaration(Class(:Logical))
+Declaration(Class(:Measure))
+Declaration(Class(:Orbital))
+Declaration(Class(:Physical))
+Declaration(Class(:Port))
+Declaration(Class(:Requirement))
+Declaration(Class(:Resource))
+Declaration(Class(:Risk))
+Declaration(Class(:Statement))
+Declaration(Class(:Test_Case))
+Declaration(Class(:Time))
+Declaration(Class(:Virtual))
+Declaration(Class(<http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>))
+Declaration(ObjectProperty(:alternative))
+Declaration(ObjectProperty(:alternative_of))
+Declaration(ObjectProperty(:caused_by))
+Declaration(ObjectProperty(:causes))
+Declaration(ObjectProperty(:connected_by))
+Declaration(ObjectProperty(:connects_to))
+Declaration(ObjectProperty(:consumed_by))
+Declaration(ObjectProperty(:consumes))
+Declaration(ObjectProperty(:copied_by))
+Declaration(ObjectProperty(:copies))
+Declaration(ObjectProperty(:date_resolved_by))
+Declaration(ObjectProperty(:date_resolves))
+Declaration(ObjectProperty(:decided_by))
+Declaration(ObjectProperty(:decision_due))
+Declaration(ObjectProperty(:decomposed_by))
+Declaration(ObjectProperty(:decomposes))
+Declaration(ObjectProperty(:defined_protocol_by))
+Declaration(ObjectProperty(:defines_protocol_for))
+Declaration(ObjectProperty(:depends_on))
+Declaration(ObjectProperty(:derived_by))
+Declaration(ObjectProperty(:derives))
+Declaration(ObjectProperty(:enabled_by))
+Declaration(ObjectProperty(:enables))
+Declaration(ObjectProperty(:equation_for))
+Declaration(ObjectProperty(:equation_of))
+Declaration(ObjectProperty(:extend))
+Declaration(ObjectProperty(:extended_by))
+Declaration(ObjectProperty(:fetched_by))
+Declaration(ObjectProperty(:fetches))
+Declaration(ObjectProperty(:generated_by))
+Declaration(ObjectProperty(:generates))
+Declaration(ObjectProperty(:has_dependent))
+Declaration(ObjectProperty(:has_variable))
+Declaration(ObjectProperty(:include))
+Declaration(ObjectProperty(:included_by))
+Declaration(ObjectProperty(:incurred_by))
+Declaration(ObjectProperty(:incurs))
+Declaration(ObjectProperty(:joined_by))
+Declaration(ObjectProperty(:joins))
+Declaration(ObjectProperty(:located_at))
+Declaration(ObjectProperty(:locates))
+Declaration(ObjectProperty(:made))
+Declaration(ObjectProperty(:made_by))
+Declaration(ObjectProperty(:mitigated_by))
+Declaration(ObjectProperty(:mitigates))
+Declaration(ObjectProperty(:occurred_by))
+Declaration(ObjectProperty(:occurs))
+Declaration(ObjectProperty(:orbited_by))
+Declaration(ObjectProperty(:orbits))
+Declaration(ObjectProperty(:performed_by))
+Declaration(ObjectProperty(:performs))
+Declaration(ObjectProperty(:produced_by))
+Declaration(ObjectProperty(:produces))
+Declaration(ObjectProperty(:pushed_by))
+Declaration(ObjectProperty(:pushes))
+Declaration(ObjectProperty(:received_by))
+Declaration(ObjectProperty(:receives))
+Declaration(ObjectProperty(:references))
+Declaration(ObjectProperty(:references_by))
+Declaration(ObjectProperty(:refined_by))
+Declaration(ObjectProperty(:refines))
+Declaration(ObjectProperty(:related_to))
+Declaration(ObjectProperty(:relates))
+Declaration(ObjectProperty(:represented_in))
+Declaration(ObjectProperty(:represents))
+Declaration(ObjectProperty(:resolved_by))
+Declaration(ObjectProperty(:resolves))
+Declaration(ObjectProperty(:responded_by))
+Declaration(ObjectProperty(:responds_to))
+Declaration(ObjectProperty(:result_of))
+Declaration(ObjectProperty(:results_in))
+Declaration(ObjectProperty(:satisfied_by))
+Declaration(ObjectProperty(:satisfies))
+Declaration(ObjectProperty(:seized_by))
+Declaration(ObjectProperty(:seizes))
+Declaration(ObjectProperty(:source_of))
+Declaration(ObjectProperty(:sourced_by))
+Declaration(ObjectProperty(:specified_by))
+Declaration(ObjectProperty(:specifies))
+Declaration(ObjectProperty(:traced_from))
+Declaration(ObjectProperty(:traced_to))
+Declaration(ObjectProperty(:transferred_by))
+Declaration(ObjectProperty(:transfers))
+Declaration(ObjectProperty(:variable_of))
+Declaration(ObjectProperty(:verified_by))
+Declaration(ObjectProperty(:verifies))
+Declaration(DataProperty(:ActionTypes))
+Declaration(DataProperty(:Actual_Result))
+Declaration(DataProperty(:Address))
+Declaration(DataProperty(:Altitude))
+Declaration(DataProperty(:Amount))
+Declaration(DataProperty(:Apoapsis))
+Declaration(DataProperty(:Argument_of_Periapsis))
+Declaration(DataProperty(:ArtifactTypes))
+Declaration(DataProperty(:AssetTypes))
+Declaration(DataProperty(:Assumptions))
+Declaration(DataProperty(:Capacity))
+Declaration(DataProperty(:Category))
+Declaration(DataProperty(:CharacteristicTypes))
+Declaration(DataProperty(:Clear))
+Declaration(DataProperty(:Complete))
+Declaration(DataProperty(:ConduitTypes))
+Declaration(DataProperty(:Consequence))
+Declaration(DataProperty(:Consequence_Description))
+Declaration(DataProperty(:Consistent))
+Declaration(DataProperty(:Contract_Type))
+Declaration(DataProperty(:Coordinates))
+Declaration(DataProperty(:Correct))
+Declaration(DataProperty(:CostTypes))
+Declaration(DataProperty(:Date_Published))
+Declaration(DataProperty(:Description))
+Declaration(DataProperty(:Design))
+Declaration(DataProperty(:Direction))
+Declaration(DataProperty(:Duration))
+Declaration(DataProperty(:Eccentricity))
+Declaration(DataProperty(:Equation_Value))
+Declaration(DataProperty(:Expected_Result))
+Declaration(DataProperty(:Feasible))
+Declaration(DataProperty(:File))
+Declaration(DataProperty(:Improvement_Direction))
+Declaration(DataProperty(:Inclination))
+Declaration(DataProperty(:Initial_Amount))
+Declaration(DataProperty(:Justification))
+Declaration(DataProperty(:Latency))
+Declaration(DataProperty(:Longitude_of_Ascending_Node))
+Declaration(DataProperty(:Maximum_Amount))
+Declaration(DataProperty(:Mean_Anomaly))
+Declaration(DataProperty(:MeasureTypes))
+Declaration(DataProperty(:Minimum_Amount))
+Declaration(DataProperty(:Modular))
+Declaration(DataProperty(:Name))
+Declaration(DataProperty(:Number))
+Declaration(DataProperty(:Objective_Value))
+Declaration(DataProperty(:Origin_of_Longitude))
+Declaration(DataProperty(:Percent_Complete))
+Declaration(DataProperty(:Periapsis))
+Declaration(DataProperty(:Probability))
+Declaration(DataProperty(:Projected_Value))
+Declaration(DataProperty(:Rate))
+Declaration(DataProperty(:Rationale))
+Declaration(DataProperty(:Reference_Plane))
+Declaration(DataProperty(:RequirementTypes))
+Declaration(DataProperty(:RiskTypes))
+Declaration(DataProperty(:Risk_Status))
+Declaration(DataProperty(:Semimajor_Axis))
+Declaration(DataProperty(:Set_Up))
+Declaration(DataProperty(:Size))
+Declaration(DataProperty(:Start))
+Declaration(DataProperty(:StatementTypes))
+Declaration(DataProperty(:TC_Status))
+Declaration(DataProperty(:Threshold_Value))
+Declaration(DataProperty(:TimeTypes))
+Declaration(DataProperty(:Time_Duration))
+Declaration(DataProperty(:Time_Start))
+Declaration(DataProperty(:Tolerance))
+Declaration(DataProperty(:Traceable))
+Declaration(DataProperty(:Units))
+Declaration(DataProperty(:Verifiable))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :alternative (:alternative)
+
+AnnotationAssertion(rdfs:comment :alternative "Attribute on relationship: Choice; isDefinedBy: Choice represents if this alternative was the choice selected; Type: boolean.")
+AnnotationAssertion(rdfs:isDefinedBy :alternative "Alternative identifies the Statement that is a potential choice for this Decision.")
+InverseObjectProperties(:alternative :alternative_of)
+ObjectPropertyDomain(:alternative :Decision)
+ObjectPropertyRange(:alternative :Statement)
+
+# Object Property: :alternative_of (:alternative_of)
+
+AnnotationAssertion(rdfs:comment :alternative_of "Attribute on relationship: Choice; isDefinedBy: Choice represents if this alternative was the choice selected; Type: boolean.")
+AnnotationAssertion(rdfs:isDefinedBy :alternative_of "Alternative of identifies the Decision that has this Statement as a potential choice.")
+ObjectPropertyDomain(:alternative_of :Statement)
+ObjectPropertyRange(:alternative_of :Decision)
+
+# Object Property: :caused_by (:caused_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :caused_by "Caused by identifies the entity that this Risk results.")
+InverseObjectProperties(:caused_by :causes)
+ObjectPropertyDomain(:caused_by :Risk)
+ObjectPropertyRange(:caused_by :Action)
+ObjectPropertyRange(:caused_by :Artifact)
+ObjectPropertyRange(:caused_by :Asset)
+ObjectPropertyRange(:caused_by :Characteristic)
+ObjectPropertyRange(:caused_by :Connection)
+ObjectPropertyRange(:caused_by :Cost)
+ObjectPropertyRange(:caused_by :Risk)
+ObjectPropertyRange(:caused_by :Statement)
+ObjectPropertyRange(:caused_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :causes (:causes)
+
+AnnotationAssertion(rdfs:isDefinedBy :causes "Causes identifies the Risk resulting from this entity.")
+ObjectPropertyDomain(:causes :Action)
+ObjectPropertyDomain(:causes :Artifact)
+ObjectPropertyDomain(:causes :Asset)
+ObjectPropertyDomain(:causes :Characteristic)
+ObjectPropertyDomain(:causes :Connection)
+ObjectPropertyDomain(:causes :Cost)
+ObjectPropertyDomain(:causes :Risk)
+ObjectPropertyDomain(:causes :Statement)
+ObjectPropertyDomain(:causes <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:causes :Risk)
+
+# Object Property: :connected_by (:connected_by)
+
+AnnotationAssertion(rdfs:comment :connected_by "Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.")
+AnnotationAssertion(rdfs:comment :connected_by "Attribute on relationship: Origin; isDefinedBy: Origin represents if the Asset is the origin of the Connector. This attribute enables unidirectional (one or the other Asset's relationship origin is False), in additional to the default bi-directional flow (both origins are set to True as a default); Type: boolean.")
+AnnotationAssertion(rdfs:isDefinedBy :connected_by "Connected by identifies the Connector that adjoins this Asset.")
+InverseObjectProperties(:connected_by :connects_to)
+ObjectPropertyDomain(:connected_by :Asset)
+ObjectPropertyRange(:connected_by :Connection)
+
+# Object Property: :connects_to (:connects_to)
+
+AnnotationAssertion(rdfs:comment :connects_to "Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.")
+AnnotationAssertion(rdfs:comment :connects_to "Attribute on relationship: Origin; isDefinedBy: Origin represents if the Asset is the origin of the Connector. This attribute enables unidirectional (one or the other Asset's relationship origin is False), in additional to the default bi-directional flow (both origins are set to True as a default); Type: boolean.")
+AnnotationAssertion(rdfs:isDefinedBy :connects_to "Connects to identifies the Asset that this Connector adjoins")
+ObjectPropertyDomain(:connects_to :Connection)
+ObjectPropertyRange(:connects_to :Asset)
+
+# Object Property: :consumed_by (:consumed_by)
+
+AnnotationAssertion(rdfs:comment :consumed_by "Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)")
+AnnotationAssertion(rdfs:isDefinedBy :consumed_by "Consumed by identifies the Action that uses this Resource. After the Action is completed the amount consumed is not returned to the Resource.")
+InverseObjectProperties(:consumed_by :consumes)
+ObjectPropertyDomain(:consumed_by :Resource)
+ObjectPropertyRange(:consumed_by :Action)
+
+# Object Property: :consumes (:consumes)
+
+AnnotationAssertion(rdfs:comment :consumes "Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)")
+AnnotationAssertion(rdfs:isDefinedBy :consumes "Consumes identifies the Resource that this Action uses. After this Action is completed the amount consumed is not returned to the Resource.")
+ObjectPropertyDomain(:consumes :Action)
+ObjectPropertyRange(:consumes :Resource)
+
+# Object Property: :copied_by (:copied_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :copied_by "Copied by identifies the Requirement that is a clone of this Requirement.")
+InverseObjectProperties(:copied_by :copies)
+ObjectPropertyDomain(:copied_by :Requirement)
+ObjectPropertyRange(:copied_by :Requirement)
+
+# Object Property: :copies (:copies)
+
+AnnotationAssertion(rdfs:isDefinedBy :copies "Copies identifies the Requirement that this Requirement clones.")
+ObjectPropertyDomain(:copies :Requirement)
+ObjectPropertyRange(:copies :Requirement)
+
+# Object Property: :date_resolved_by (:date_resolved_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :date_resolved_by "Date resolved by identifies the Time when this Decision was closed.")
+InverseObjectProperties(:date_resolved_by :date_resolves)
+ObjectPropertyDomain(:date_resolved_by :Decision)
+ObjectPropertyRange(:date_resolved_by :Time)
+
+# Object Property: :date_resolves (:date_resolves)
+
+AnnotationAssertion(rdfs:isDefinedBy :date_resolves "Date resolves identifies the Decision that is closed at this Time.")
+ObjectPropertyDomain(:date_resolves :Time)
+ObjectPropertyRange(:date_resolves :Decision)
+
+# Object Property: :decided_by (:decided_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :decided_by "Decided by identifies the Decision scheduled for closure at this Time.")
+InverseObjectProperties(:decided_by :decision_due)
+ObjectPropertyDomain(:decided_by :Time)
+ObjectPropertyRange(:decided_by :Decision)
+
+# Object Property: :decision_due (:decision_due)
+
+AnnotationAssertion(rdfs:isDefinedBy :decision_due "Decision due identifies the Time when this Decision is scheduled to be closed.")
+ObjectPropertyDomain(:decision_due :Decision)
+ObjectPropertyRange(:decision_due :Time)
+
+# Object Property: :decomposed_by (:decomposed_by)
+
+AnnotationAssertion(rdfs:comment :decomposed_by "Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.")
+AnnotationAssertion(rdfs:isDefinedBy :decomposed_by "Decomposed by identifies the children of this entity.")
+SubObjectPropertyOf(:decomposed_by owl:topObjectProperty)
+InverseObjectProperties(:decomposed_by :decomposes)
+
+# Object Property: :decomposes (:decomposes)
+
+AnnotationAssertion(rdfs:comment :decomposes "Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.")
+AnnotationAssertion(rdfs:isDefinedBy :decomposes "Decomposes identifies the parent of this entity.")
+SubObjectPropertyOf(:decomposes owl:topObjectProperty)
+
+# Object Property: :defined_protocol_by (:defined_protocol_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :defined_protocol_by "Defined protocol by identifies the Artifact that contains the standard used by this Conduit.")
+InverseObjectProperties(:defined_protocol_by :defines_protocol_for)
+ObjectPropertyDomain(:defined_protocol_by :Conduit)
+ObjectPropertyRange(:defined_protocol_by :Artifact)
+
+# Object Property: :defines_protocol_for (:defines_protocol_for)
+
+AnnotationAssertion(rdfs:isDefinedBy :defines_protocol_for "Defines protocol for identifies the Connector that uses the standard identified in this Artifact.")
+ObjectPropertyDomain(:defines_protocol_for :Artifact)
+ObjectPropertyRange(:defines_protocol_for :Conduit)
+
+# Object Property: :depends_on (:depends_on)
+
+AnnotationAssertion(rdfs:comment :depends_on "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :depends_on "Depends on identifies the Action that this Action has a dependency on.")
+ObjectPropertyDomain(:depends_on :Action)
+ObjectPropertyRange(:depends_on :Action)
+
+# Object Property: :derived_by (:derived_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :derived_by "Derived by identifies the Requirement that is developed from this Requirement.")
+InverseObjectProperties(:derived_by :derives)
+ObjectPropertyDomain(:derived_by :Requirement)
+ObjectPropertyRange(:derived_by :Requirement)
+
+# Object Property: :derives (:derives)
+
+AnnotationAssertion(rdfs:isDefinedBy :derives "Derives identifies the Requirement that this Requirement develop from.")
+ObjectPropertyDomain(:derives :Requirement)
+ObjectPropertyRange(:derives :Requirement)
+
+# Object Property: :enabled_by (:enabled_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :enabled_by "Enabled by identifies the entity that empowers this Decision to be made.")
+InverseObjectProperties(:enabled_by :enables)
+ObjectPropertyDomain(:enabled_by :Decision)
+ObjectPropertyRange(:enabled_by :Action)
+ObjectPropertyRange(:enabled_by :Artifact)
+ObjectPropertyRange(:enabled_by :Asset)
+ObjectPropertyRange(:enabled_by :Characteristic)
+ObjectPropertyRange(:enabled_by :Connection)
+ObjectPropertyRange(:enabled_by :Cost)
+ObjectPropertyRange(:enabled_by :Decision)
+ObjectPropertyRange(:enabled_by :Risk)
+ObjectPropertyRange(:enabled_by :Statement)
+ObjectPropertyRange(:enabled_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :enables (:enables)
+
+AnnotationAssertion(rdfs:isDefinedBy :enables "Enables identifies the Decision that is empowered from this entity.")
+ObjectPropertyDomain(:enables :Action)
+ObjectPropertyDomain(:enables :Artifact)
+ObjectPropertyDomain(:enables :Asset)
+ObjectPropertyDomain(:enables :Characteristic)
+ObjectPropertyDomain(:enables :Connection)
+ObjectPropertyDomain(:enables :Cost)
+ObjectPropertyDomain(:enables :Decision)
+ObjectPropertyDomain(:enables :Risk)
+ObjectPropertyDomain(:enables :Statement)
+ObjectPropertyDomain(:enables <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:enables :Decision)
+
+# Object Property: :equation_for (:equation_for)
+
+AnnotationAssertion(rdfs:comment :equation_for "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :equation_for "Equation for identifies the entity that this Equation represents.")
+InverseObjectProperties(:equation_for :equation_of)
+ObjectPropertyDomain(:equation_for :Equation)
+ObjectPropertyRange(:equation_for :Action)
+ObjectPropertyRange(:equation_for :Artifact)
+ObjectPropertyRange(:equation_for :Asset)
+ObjectPropertyRange(:equation_for :Characteristic)
+ObjectPropertyRange(:equation_for :Connection)
+ObjectPropertyRange(:equation_for :Cost)
+ObjectPropertyRange(:equation_for :Decision)
+ObjectPropertyRange(:equation_for :Location)
+ObjectPropertyRange(:equation_for :Risk)
+ObjectPropertyRange(:equation_for :Statement)
+ObjectPropertyRange(:equation_for :Time)
+ObjectPropertyRange(:equation_for <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :equation_of (:equation_of)
+
+AnnotationAssertion(rdfs:comment :equation_of "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :equation_of "Equation of identifies the Equation that represents this entity")
+ObjectPropertyDomain(:equation_of :Action)
+ObjectPropertyDomain(:equation_of :Artifact)
+ObjectPropertyDomain(:equation_of :Asset)
+ObjectPropertyDomain(:equation_of :Characteristic)
+ObjectPropertyDomain(:equation_of :Connection)
+ObjectPropertyDomain(:equation_of :Cost)
+ObjectPropertyDomain(:equation_of :Decision)
+ObjectPropertyDomain(:equation_of :Location)
+ObjectPropertyDomain(:equation_of :Risk)
+ObjectPropertyDomain(:equation_of :Statement)
+ObjectPropertyDomain(:equation_of :Time)
+ObjectPropertyDomain(:equation_of <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:equation_of :Equation)
+
+# Object Property: :extend (:extend)
+
+AnnotationAssertion(rdfs:comment :extend "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :extend "Extend identifies the Action (use case) that is added to this Action (use case).")
+InverseObjectProperties(:extend :extended_by)
+ObjectPropertyDomain(:extend :Action)
+ObjectPropertyRange(:extend :Action)
+
+# Object Property: :extended_by (:extended_by)
+
+AnnotationAssertion(rdfs:comment :extended_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :extended_by "Extended by identifies the Action (use case) that is added from this Action (use case).")
+ObjectPropertyDomain(:extended_by :Action)
+ObjectPropertyRange(:extended_by :Action)
+
+# Object Property: :fetched_by (:fetched_by)
+
+AnnotationAssertion(rdfs:comment :fetched_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :fetched_by "Fetched by identifies the Action that this State Characteristic is received by.")
+InverseObjectProperties(:fetched_by :fetches)
+ObjectPropertyDomain(:fetched_by :Characteristic)
+ObjectPropertyRange(:fetched_by :Action)
+
+# Object Property: :fetches (:fetches)
+
+AnnotationAssertion(rdfs:comment :fetches "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :fetches "Fetches identifies the State Characteristic that this Action receives.")
+ObjectPropertyDomain(:fetches :Action)
+ObjectPropertyRange(:fetches :Characteristic)
+
+# Object Property: :generated_by (:generated_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :generated_by "Generated by identifies the Action or Characteristic that this Input/Output or Action was transformed by.")
+InverseObjectProperties(:generated_by :generates)
+ObjectPropertyDomain(:generated_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:generated_by :Action)
+
+# Object Property: :generates (:generates)
+
+AnnotationAssertion(rdfs:isDefinedBy :generates "Generates identifies the Input/Output or Action that this Action or Characteristic transforms")
+ObjectPropertyDomain(:generates :Action)
+ObjectPropertyRange(:generates <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :has_dependent (:has_dependent)
+
+AnnotationAssertion(rdfs:comment :has_dependent "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :has_dependent "Has Dependent identifies the Action that depends on this Action.")
+ObjectPropertyDomain(:has_dependent :Action)
+ObjectPropertyRange(:has_dependent :Action)
+
+# Object Property: :has_variable (:has_variable)
+
+AnnotationAssertion(rdfs:isDefinedBy :has_variable "Has variable identifies the Characteristic that is represented in this Equation.")
+InverseObjectProperties(:has_variable :variable_of)
+ObjectPropertyDomain(:has_variable :Equation)
+ObjectPropertyRange(:has_variable :Characteristic)
+
+# Object Property: :include (:include)
+
+AnnotationAssertion(rdfs:comment :include "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :include "Include identifies the Action (use case) that is added to this Action (use case).")
+InverseObjectProperties(:include :included_by)
+ObjectPropertyDomain(:include :Action)
+ObjectPropertyRange(:include :Action)
+
+# Object Property: :included_by (:included_by)
+
+AnnotationAssertion(rdfs:comment :included_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :included_by "Included by identifies the Action (use case) that is added from this Action (use case).")
+ObjectPropertyDomain(:included_by :Action)
+ObjectPropertyRange(:included_by :Action)
+
+# Object Property: :incurred_by (:incurred_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :incurred_by "Incurred by identifies the entity that has this Cost value.")
+ObjectPropertyDomain(:incurred_by :Cost)
+ObjectPropertyRange(:incurred_by :Action)
+ObjectPropertyRange(:incurred_by :Artifact)
+ObjectPropertyRange(:incurred_by :Asset)
+ObjectPropertyRange(:incurred_by :Characteristic)
+ObjectPropertyRange(:incurred_by :Connection)
+ObjectPropertyRange(:incurred_by :Risk)
+ObjectPropertyRange(:incurred_by :Statement)
+ObjectPropertyRange(:incurred_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :incurs (:incurs)
+
+AnnotationAssertion(rdfs:isDefinedBy :incurs "Incurs identifies the Cost value for this entity")
+ObjectPropertyDomain(:incurs :Action)
+ObjectPropertyDomain(:incurs :Artifact)
+ObjectPropertyDomain(:incurs :Asset)
+ObjectPropertyDomain(:incurs :Characteristic)
+ObjectPropertyDomain(:incurs :Connection)
+ObjectPropertyDomain(:incurs :Risk)
+ObjectPropertyDomain(:incurs :Statement)
+ObjectPropertyDomain(:incurs <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:incurs :Cost)
+
+# Object Property: :joined_by (:joined_by)
+
+AnnotationAssertion(rdfs:comment :joined_by "Attribute on relationship: Bidirectional; isDefinedBy: Bidirectional represents if the connection between two connectors is bidirectional.  If the connector is not bidirectional the connector that has the relation joins is the start and the connector with joined by is the end; Type: boolean")
+AnnotationAssertion(rdfs:isDefinedBy :joined_by "Joined by identifies the Connection that connects to this Connection.  Joined by implies the end of the relationship.")
+InverseObjectProperties(:joined_by :joins)
+ObjectPropertyDomain(:joined_by :Connection)
+ObjectPropertyRange(:joined_by :Connection)
+
+# Object Property: :joins (:joins)
+
+AnnotationAssertion(rdfs:comment :joins "Attribute on relationship: Bidirectional; isDefinedBy: Bidirectional represents if the connection between two connectors is bidirectional.  If the connector is not bidirectional the connector that has the relation joins is the start and the connector with joined by is the end; Type: boolean")
+AnnotationAssertion(rdfs:isDefinedBy :joins "Joins identifies the Connection that is connected to this Connection.  Joins implies the start of this relationship.")
+ObjectPropertyDomain(:joins :Connection)
+ObjectPropertyRange(:joins :Connection)
+
+# Object Property: :located_at (:located_at)
+
+AnnotationAssertion(rdfs:isDefinedBy :located_at "Located at identifies the Location where this entity exists.")
+InverseObjectProperties(:located_at :locates)
+ObjectPropertyDomain(:located_at :Action)
+ObjectPropertyDomain(:located_at :Artifact)
+ObjectPropertyDomain(:located_at :Asset)
+ObjectPropertyDomain(:located_at :Characteristic)
+ObjectPropertyDomain(:located_at :Connection)
+ObjectPropertyDomain(:located_at :Cost)
+ObjectPropertyDomain(:located_at :Risk)
+ObjectPropertyDomain(:located_at :Statement)
+ObjectPropertyDomain(:located_at <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:located_at :Location)
+
+# Object Property: :locates (:locates)
+
+AnnotationAssertion(rdfs:isDefinedBy :locates "Locates identifies an entity that exists at this Location.")
+ObjectPropertyDomain(:locates :Location)
+ObjectPropertyRange(:locates :Action)
+ObjectPropertyRange(:locates :Artifact)
+ObjectPropertyRange(:locates :Asset)
+ObjectPropertyRange(:locates :Characteristic)
+ObjectPropertyRange(:locates :Connection)
+ObjectPropertyRange(:locates :Cost)
+ObjectPropertyRange(:locates :Risk)
+ObjectPropertyRange(:locates :Statement)
+ObjectPropertyRange(:locates <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :made (:made)
+
+AnnotationAssertion(rdfs:comment :made "Made identifies the Decision that this Asset decided.")
+InverseObjectProperties(:made :made_by)
+ObjectPropertyDomain(:made :Asset)
+ObjectPropertyRange(:made :Decision)
+
+# Object Property: :made_by (:made_by)
+
+AnnotationAssertion(rdfs:comment :made_by "Made by identifies the Asset that decided this Decision.")
+ObjectPropertyDomain(:made_by :Decision)
+ObjectPropertyRange(:made_by :Asset)
+
+# Object Property: :mitigated_by (:mitigated_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :mitigated_by "Mitigated by identifies the entity that contains the plan to alleviate this Risk.")
+InverseObjectProperties(:mitigated_by :mitigates)
+ObjectPropertyDomain(:mitigated_by :Risk)
+ObjectPropertyRange(:mitigated_by :Action)
+ObjectPropertyRange(:mitigated_by :Artifact)
+ObjectPropertyRange(:mitigated_by :Asset)
+ObjectPropertyRange(:mitigated_by :Characteristic)
+ObjectPropertyRange(:mitigated_by :Connection)
+ObjectPropertyRange(:mitigated_by :Cost)
+ObjectPropertyRange(:mitigated_by :Location)
+ObjectPropertyRange(:mitigated_by :Statement)
+ObjectPropertyRange(:mitigated_by :Time)
+ObjectPropertyRange(:mitigated_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :mitigates (:mitigates)
+
+AnnotationAssertion(rdfs:isDefinedBy :mitigates "Mitigates identifies the Risk that this entity plan alleviates")
+ObjectPropertyDomain(:mitigates :Action)
+ObjectPropertyDomain(:mitigates :Artifact)
+ObjectPropertyDomain(:mitigates :Asset)
+ObjectPropertyDomain(:mitigates :Characteristic)
+ObjectPropertyDomain(:mitigates :Connection)
+ObjectPropertyDomain(:mitigates :Cost)
+ObjectPropertyDomain(:mitigates :Location)
+ObjectPropertyDomain(:mitigates :Statement)
+ObjectPropertyDomain(:mitigates :Time)
+ObjectPropertyDomain(:mitigates <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:mitigates :Risk)
+
+# Object Property: :occurred_by (:occurred_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :occurred_by "Occurred by identifies the entity that happens at this Time.")
+InverseObjectProperties(:occurred_by :occurs)
+ObjectPropertyDomain(:occurred_by :Time)
+ObjectPropertyRange(:occurred_by :Action)
+ObjectPropertyRange(:occurred_by :Artifact)
+ObjectPropertyRange(:occurred_by :Asset)
+ObjectPropertyRange(:occurred_by :Characteristic)
+ObjectPropertyRange(:occurred_by :Connection)
+ObjectPropertyRange(:occurred_by :Cost)
+ObjectPropertyRange(:occurred_by :Location)
+ObjectPropertyRange(:occurred_by :Risk)
+ObjectPropertyRange(:occurred_by :Statement)
+ObjectPropertyRange(:occurred_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :occurs (:occurs)
+
+AnnotationAssertion(rdfs:isDefinedBy :occurs "Occurs identifies the Time (or timespan) this entity happens.")
+ObjectPropertyDomain(:occurs :Action)
+ObjectPropertyDomain(:occurs :Artifact)
+ObjectPropertyDomain(:occurs :Asset)
+ObjectPropertyDomain(:occurs :Characteristic)
+ObjectPropertyDomain(:occurs :Connection)
+ObjectPropertyDomain(:occurs :Cost)
+ObjectPropertyDomain(:occurs :Location)
+ObjectPropertyDomain(:occurs :Risk)
+ObjectPropertyDomain(:occurs :Statement)
+ObjectPropertyDomain(:occurs <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:occurs :Time)
+
+# Object Property: :orbited_by (:orbited_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :orbited_by "Orbited by identifies the Asset that revolves around this Asset, such as the Earth is orbited by the Moon.")
+InverseObjectProperties(:orbited_by :orbits)
+ObjectPropertyDomain(:orbited_by :Asset)
+ObjectPropertyRange(:orbited_by :Asset)
+
+# Object Property: :orbits (:orbits)
+
+AnnotationAssertion(rdfs:isDefinedBy :orbits "Orbits identifies the Asset that this Asset revolves around, such as the Moon orbits the Earth.")
+ObjectPropertyDomain(:orbits :Asset)
+ObjectPropertyRange(:orbits :Asset)
+
+# Object Property: :performed_by (:performed_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :performed_by "Performed by identifies the Asset that executes this Action.")
+InverseObjectProperties(:performed_by :performs)
+ObjectPropertyDomain(:performed_by :Action)
+ObjectPropertyRange(:performed_by :Asset)
+
+# Object Property: :performs (:performs)
+
+AnnotationAssertion(rdfs:isDefinedBy :performs "Performs identifies the Action that is executed by this Asset.")
+ObjectPropertyDomain(:performs :Asset)
+ObjectPropertyRange(:performs :Action)
+
+# Object Property: :produced_by (:produced_by)
+
+AnnotationAssertion(rdfs:comment :produced_by "Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)")
+AnnotationAssertion(rdfs:isDefinedBy :produced_by "Produced by identifies the Action that creates this Resource. Resources are produced when the execution of the action completes.")
+InverseObjectProperties(:produced_by :produces)
+ObjectPropertyDomain(:produced_by :Resource)
+ObjectPropertyRange(:produced_by :Action)
+
+# Object Property: :produces (:produces)
+
+AnnotationAssertion(rdfs:comment :produces "Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)")
+AnnotationAssertion(rdfs:isDefinedBy :produces "Produces identifies the Resource that is created by this Action. Resources are produced when the execution of the action completes")
+ObjectPropertyDomain(:produces :Action)
+ObjectPropertyRange(:produces :Resource)
+
+# Object Property: :pushed_by (:pushed_by)
+
+AnnotationAssertion(rdfs:comment :pushed_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :pushed_by "Pushed by identifies the State Characteristic that this Action is generated from.")
+InverseObjectProperties(:pushed_by :pushes)
+ObjectPropertyDomain(:pushed_by :Action)
+ObjectPropertyRange(:pushed_by :Characteristic)
+
+# Object Property: :pushes (:pushes)
+
+AnnotationAssertion(rdfs:comment :pushes "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :pushes "Pushes identifies the Action that this State Characteristic generates.")
+ObjectPropertyDomain(:pushes :Characteristic)
+ObjectPropertyRange(:pushes :Action)
+
+# Object Property: :received_by (:received_by)
+
+AnnotationAssertion(rdfs:comment :received_by "Attribute on relationship: Trigger; isDescBy: Trigger represents this relation as an enabling requirement for the Action.  An Action begins execution when it has received control enablement, all of its triggers have arrived, and its necessary resources are available; Type: boolean")
+AnnotationAssertion(rdfs:isDefinedBy :received_by "Received by identifies the Action or Characteristic that takes in this Input/Output or Action.")
+InverseObjectProperties(:received_by :receives)
+ObjectPropertyDomain(:received_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:received_by :Action)
+
+# Object Property: :receives (:receives)
+
+AnnotationAssertion(rdfs:comment :receives "Attribute on relationship: Trigger; isDescBy: Trigger represents this relation as an enabling requirement for the Action.  An Action begins execution when it has received control enablement, all of its triggers have arrived, and its necessary resources are available; Type: boolean")
+AnnotationAssertion(rdfs:isDefinedBy :receives "Receives identifies the Input/Output or Action that is taken in by this Action or Characteristic.")
+ObjectPropertyDomain(:receives :Action)
+ObjectPropertyRange(:receives <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :references (:references)
+
+AnnotationAssertion(rdfs:isDefinedBy :references "References identifies the Artifact that specifies and/or enhances the definition of this entity.")
+InverseObjectProperties(:references :references_by)
+ObjectPropertyDomain(:references :Action)
+ObjectPropertyDomain(:references :Asset)
+ObjectPropertyDomain(:references :Characteristic)
+ObjectPropertyDomain(:references :Connection)
+ObjectPropertyDomain(:references :Cost)
+ObjectPropertyDomain(:references :Risk)
+ObjectPropertyDomain(:references :Statement)
+ObjectPropertyDomain(:references <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:references :Artifact)
+
+# Object Property: :references_by (:references_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :references_by "Referenced by identifies the the entity that specified and/or enhanced its definition by this Artifact.")
+ObjectPropertyDomain(:references_by :Artifact)
+ObjectPropertyRange(:references_by :Action)
+ObjectPropertyRange(:references_by :Asset)
+ObjectPropertyRange(:references_by :Characteristic)
+ObjectPropertyRange(:references_by :Connection)
+ObjectPropertyRange(:references_by :Cost)
+ObjectPropertyRange(:references_by :Risk)
+ObjectPropertyRange(:references_by :Statement)
+ObjectPropertyRange(:references_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :refined_by (:refined_by)
+
+AnnotationAssertion(rdfs:comment :refined_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :refined_by "Refined by identifies the Requirement that clarifies this Requirement.")
+InverseObjectProperties(:refined_by :refines)
+ObjectPropertyDomain(:refined_by :Requirement)
+ObjectPropertyRange(:refined_by :Requirement)
+
+# Object Property: :refines (:refines)
+
+AnnotationAssertion(rdfs:comment :refines "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :refines "Refines identifies the Requirement that this Requirement clarifies.")
+ObjectPropertyDomain(:refines :Requirement)
+ObjectPropertyRange(:refines :Requirement)
+
+# Object Property: :related_to (:related_to)
+
+AnnotationAssertion(rdfs:comment :related_to "Attribute on relationship: Context; isDefinedBy: Context represents a description of this relation; Type: string")
+AnnotationAssertion(rdfs:isDefinedBy :related_to "Related to identifies the entity that ties in a peer-to-peer way with this entity.")
+SubObjectPropertyOf(:related_to owl:topObjectProperty)
+InverseObjectProperties(:related_to :relates)
+
+# Object Property: :relates (:relates)
+
+AnnotationAssertion(rdfs:comment :relates "Attribute on relationship: Context; isDefinedBy: Context represents a description of this relation; Type: string")
+AnnotationAssertion(rdfs:isDefinedBy :relates "Relates identifies the peer-to-peer entity that is tied to this entity.")
+SubObjectPropertyOf(:relates owl:topObjectProperty)
+
+# Object Property: :represented_in (:represented_in)
+
+AnnotationAssertion(rdfs:isDefinedBy :represented_in "Represented in identifies the Asset who’s diagrams include this Asset.")
+InverseObjectProperties(:represented_in :represents)
+ObjectPropertyDomain(:represented_in :Asset)
+ObjectPropertyRange(:represented_in :Asset)
+
+# Object Property: :represents (:represents)
+
+AnnotationAssertion(rdfs:isDefinedBy :represents "Represents identities the Asset that is included in this Asset’s diagrams.")
+ObjectPropertyDomain(:represents :Asset)
+ObjectPropertyRange(:represents :Asset)
+
+# Object Property: :resolved_by (:resolved_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :resolved_by "Resolved by identifies the entity that closes this Risk.")
+InverseObjectProperties(:resolved_by :resolves)
+ObjectPropertyDomain(:resolved_by :Risk)
+ObjectPropertyRange(:resolved_by :Action)
+ObjectPropertyRange(:resolved_by :Artifact)
+ObjectPropertyRange(:resolved_by :Asset)
+ObjectPropertyRange(:resolved_by :Characteristic)
+ObjectPropertyRange(:resolved_by :Connection)
+ObjectPropertyRange(:resolved_by :Cost)
+ObjectPropertyRange(:resolved_by :Risk)
+ObjectPropertyRange(:resolved_by :Statement)
+ObjectPropertyRange(:resolved_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :resolves (:resolves)
+
+AnnotationAssertion(rdfs:isDefinedBy :resolves "Resolves identifies the Risk that is closed by this entity.")
+ObjectPropertyDomain(:resolves :Action)
+ObjectPropertyDomain(:resolves :Artifact)
+ObjectPropertyDomain(:resolves :Asset)
+ObjectPropertyDomain(:resolves :Characteristic)
+ObjectPropertyDomain(:resolves :Connection)
+ObjectPropertyDomain(:resolves :Cost)
+ObjectPropertyDomain(:resolves :Risk)
+ObjectPropertyDomain(:resolves :Statement)
+ObjectPropertyDomain(:resolves <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:resolves :Risk)
+
+# Object Property: :responded_by (:responded_by)
+
+AnnotationAssertion(rdfs:comment :responded_by "Attribute on relationship: Responsibility; isDefinedBy: Responsibility represents the Asset that has the responsibility for resolving the Decision; Type: {\"Primary\", \"Secondary\"}")
+AnnotationAssertion(rdfs:isDefinedBy :responded_by "Responded by identifies the Asset (usually a person or organization) that acts on this Decision.")
+InverseObjectProperties(:responded_by :responds_to)
+ObjectPropertyDomain(:responded_by :Decision)
+ObjectPropertyRange(:responded_by :Asset)
+
+# Object Property: :responds_to (:responds_to)
+
+AnnotationAssertion(rdfs:comment :responds_to "Attribute on relationship: Responsibility; isDefinedBy: Responsibility represents the Asset that has the responsibility for resolving the Decision; Type: {\"Primary\", \"Secondary\"}")
+AnnotationAssertion(rdfs:isDefinedBy :responds_to "Responds to identifies the Decision that is acted on by this Asset (usually a person or organization).")
+ObjectPropertyDomain(:responds_to :Asset)
+ObjectPropertyRange(:responds_to :Decision)
+
+# Object Property: :result_of (:result_of)
+
+AnnotationAssertion(rdfs:isDefinedBy :result_of "Result of identifies the entity that caused this Decision.")
+InverseObjectProperties(:result_of :results_in)
+ObjectPropertyDomain(:result_of :Decision)
+ObjectPropertyRange(:result_of :Action)
+ObjectPropertyRange(:result_of :Artifact)
+ObjectPropertyRange(:result_of :Asset)
+ObjectPropertyRange(:result_of :Characteristic)
+ObjectPropertyRange(:result_of :Connection)
+ObjectPropertyRange(:result_of :Cost)
+ObjectPropertyRange(:result_of :Decision)
+ObjectPropertyRange(:result_of :Risk)
+ObjectPropertyRange(:result_of :Statement)
+ObjectPropertyRange(:result_of <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :results_in (:results_in)
+
+AnnotationAssertion(rdfs:isDefinedBy :results_in "Results in identifies the Decision that is caused by this entity.")
+ObjectPropertyDomain(:results_in :Action)
+ObjectPropertyDomain(:results_in :Artifact)
+ObjectPropertyDomain(:results_in :Asset)
+ObjectPropertyDomain(:results_in :Characteristic)
+ObjectPropertyDomain(:results_in :Connection)
+ObjectPropertyDomain(:results_in :Cost)
+ObjectPropertyDomain(:results_in :Decision)
+ObjectPropertyDomain(:results_in :Risk)
+ObjectPropertyDomain(:results_in :Statement)
+ObjectPropertyDomain(:results_in <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:results_in :Decision)
+
+# Object Property: :satisfied_by (:satisfied_by)
+
+AnnotationAssertion(rdfs:comment :satisfied_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :satisfied_by "Satisfied by identifies the entity that fulfills this Requirement.")
+InverseObjectProperties(:satisfied_by :satisfies)
+ObjectPropertyDomain(:satisfied_by :Requirement)
+ObjectPropertyRange(:satisfied_by :Action)
+ObjectPropertyRange(:satisfied_by :Artifact)
+ObjectPropertyRange(:satisfied_by :Asset)
+ObjectPropertyRange(:satisfied_by :Characteristic)
+ObjectPropertyRange(:satisfied_by :Connection)
+ObjectPropertyRange(:satisfied_by :Cost)
+ObjectPropertyRange(:satisfied_by :Location)
+ObjectPropertyRange(:satisfied_by :Time)
+ObjectPropertyRange(:satisfied_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :satisfies (:satisfies)
+
+AnnotationAssertion(rdfs:comment :satisfies "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :satisfies "Satisfies identifies the Requirement that is fulfilled by this entity.")
+ObjectPropertyDomain(:satisfies :Action)
+ObjectPropertyDomain(:satisfies :Artifact)
+ObjectPropertyDomain(:satisfies :Asset)
+ObjectPropertyDomain(:satisfies :Characteristic)
+ObjectPropertyDomain(:satisfies :Connection)
+ObjectPropertyDomain(:satisfies :Cost)
+ObjectPropertyDomain(:satisfies :Location)
+ObjectPropertyDomain(:satisfies :Time)
+ObjectPropertyDomain(:satisfies <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:satisfies :Requirement)
+
+# Object Property: :seized_by (:seized_by)
+
+AnnotationAssertion(rdfs:comment :seized_by "Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)")
+AnnotationAssertion(rdfs:isDefinedBy :seized_by "Seized by identifies the Action that uses this Resource. After the Action has completed this Resource is released for use by other Actions.")
+InverseObjectProperties(:seized_by :seizes)
+ObjectPropertyDomain(:seized_by :Resource)
+ObjectPropertyRange(:seized_by :Action)
+
+# Object Property: :seizes (:seizes)
+
+AnnotationAssertion(rdfs:comment :seizes "Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)")
+AnnotationAssertion(rdfs:isDefinedBy :seizes "Seizes identifies the Resource that this Action uses. After this Action has completed the Resource is released for use by other Actions.")
+ObjectPropertyDomain(:seizes :Action)
+ObjectPropertyRange(:seizes :Resource)
+
+# Object Property: :source_of (:source_of)
+
+AnnotationAssertion(rdfs:isDefinedBy :source_of "Source of identifies the Statement that is contained in this Artifact.")
+InverseObjectProperties(:source_of :sourced_by)
+ObjectPropertyDomain(:source_of :Artifact)
+ObjectPropertyRange(:source_of :Statement)
+
+# Object Property: :sourced_by (:sourced_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :sourced_by "Sourced by identifies the Artifact that contains this Statement.")
+ObjectPropertyDomain(:sourced_by :Statement)
+ObjectPropertyRange(:sourced_by :Artifact)
+
+# Object Property: :specified_by (:specified_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :specified_by "Specified by identifies a Characteristic that provides further information about this entity.")
+InverseObjectProperties(:specified_by :specifies)
+ObjectPropertyDomain(:specified_by :Action)
+ObjectPropertyDomain(:specified_by :Artifact)
+ObjectPropertyDomain(:specified_by :Asset)
+ObjectPropertyDomain(:specified_by :Characteristic)
+ObjectPropertyDomain(:specified_by :Connection)
+ObjectPropertyDomain(:specified_by :Cost)
+ObjectPropertyDomain(:specified_by :Location)
+ObjectPropertyDomain(:specified_by :Risk)
+ObjectPropertyDomain(:specified_by :Statement)
+ObjectPropertyDomain(:specified_by :Time)
+ObjectPropertyDomain(:specified_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:specified_by :Characteristic)
+
+# Object Property: :specifies (:specifies)
+
+AnnotationAssertion(rdfs:isDefinedBy :specifies "Specifies identifies an entity that this Characteristic provides further information about.")
+ObjectPropertyDomain(:specifies :Characteristic)
+ObjectPropertyRange(:specifies :Action)
+ObjectPropertyRange(:specifies :Artifact)
+ObjectPropertyRange(:specifies :Asset)
+ObjectPropertyRange(:specifies :Characteristic)
+ObjectPropertyRange(:specifies :Connection)
+ObjectPropertyRange(:specifies :Cost)
+ObjectPropertyRange(:specifies :Location)
+ObjectPropertyRange(:specifies :Risk)
+ObjectPropertyRange(:specifies :Statement)
+ObjectPropertyRange(:specifies :Time)
+ObjectPropertyRange(:specifies <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :traced_from (:traced_from)
+
+AnnotationAssertion(rdfs:isDefinedBy :traced_from "Traced from identifies a Statement that accredited this entity.")
+InverseObjectProperties(:traced_from :traced_to)
+ObjectPropertyDomain(:traced_from :Action)
+ObjectPropertyDomain(:traced_from :Artifact)
+ObjectPropertyDomain(:traced_from :Asset)
+ObjectPropertyDomain(:traced_from :Characteristic)
+ObjectPropertyDomain(:traced_from :Connection)
+ObjectPropertyDomain(:traced_from :Cost)
+ObjectPropertyDomain(:traced_from :Decision)
+ObjectPropertyDomain(:traced_from :Location)
+ObjectPropertyDomain(:traced_from :Statement)
+ObjectPropertyDomain(:traced_from <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:traced_from :Statement)
+
+# Object Property: :traced_to (:traced_to)
+
+AnnotationAssertion(rdfs:isDefinedBy :traced_to "Traced to identifies an entity that is accredited to this Statement.")
+ObjectPropertyDomain(:traced_to :Statement)
+ObjectPropertyRange(:traced_to :Action)
+ObjectPropertyRange(:traced_to :Artifact)
+ObjectPropertyRange(:traced_to :Asset)
+ObjectPropertyRange(:traced_to :Characteristic)
+ObjectPropertyRange(:traced_to :Connection)
+ObjectPropertyRange(:traced_to :Cost)
+ObjectPropertyRange(:traced_to :Decision)
+ObjectPropertyRange(:traced_to :Location)
+ObjectPropertyRange(:traced_to :Statement)
+ObjectPropertyRange(:traced_to <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :transferred_by (:transferred_by)
+
+AnnotationAssertion(rdfs:isDefinedBy :transferred_by "Transferred by identifies the Conduit that passes this Input/Output.")
+InverseObjectProperties(:transferred_by :transfers)
+ObjectPropertyDomain(:transferred_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:transferred_by :Conduit)
+
+# Object Property: :transfers (:transfers)
+
+AnnotationAssertion(rdfs:isDefinedBy :transfers "Transfers identifies the Input/Output that is passed by this Conduit.")
+ObjectPropertyDomain(:transfers :Conduit)
+ObjectPropertyRange(:transfers <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :variable_of (:variable_of)
+
+AnnotationAssertion(rdfs:isDefinedBy :variable_of "Variable of identifies the Equation that this Characteristic is represented in.")
+ObjectPropertyDomain(:variable_of :Characteristic)
+ObjectPropertyRange(:variable_of :Equation)
+
+# Object Property: :verified_by (:verified_by)
+
+AnnotationAssertion(rdfs:comment :verified_by "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :verified_by "Verified by identifies the entity that supports this Requirement.")
+InverseObjectProperties(:verified_by :verifies)
+ObjectPropertyDomain(:verified_by :Requirement)
+ObjectPropertyRange(:verified_by :Action)
+ObjectPropertyRange(:verified_by :Artifact)
+ObjectPropertyRange(:verified_by :Asset)
+ObjectPropertyRange(:verified_by :Characteristic)
+ObjectPropertyRange(:verified_by :Connection)
+ObjectPropertyRange(:verified_by :Cost)
+ObjectPropertyRange(:verified_by :Location)
+ObjectPropertyRange(:verified_by :Requirement)
+ObjectPropertyRange(:verified_by :Time)
+ObjectPropertyRange(:verified_by <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+# Object Property: :verifies (:verifies)
+
+AnnotationAssertion(rdfs:comment :verifies "Added to support SysML")
+AnnotationAssertion(rdfs:isDefinedBy :verifies "Verifies identifies the Requirement that is supported by this entity.")
+ObjectPropertyDomain(:verifies :Action)
+ObjectPropertyDomain(:verifies :Artifact)
+ObjectPropertyDomain(:verifies :Asset)
+ObjectPropertyDomain(:verifies :Characteristic)
+ObjectPropertyDomain(:verifies :Connection)
+ObjectPropertyDomain(:verifies :Cost)
+ObjectPropertyDomain(:verifies :Location)
+ObjectPropertyDomain(:verifies :Requirement)
+ObjectPropertyDomain(:verifies :Time)
+ObjectPropertyDomain(:verifies <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+ObjectPropertyRange(:verifies :Requirement)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :ActionTypes (:ActionTypes)
+
+AnnotationAssertion(rdfs:comment :ActionTypes "Labels list the types of the entity.")
+DataPropertyDomain(:ActionTypes :Action)
+DataPropertyRange(:ActionTypes DataOneOf("Activity" "Capability" "Function" "Mission" "Process" "Program" "Project" "Task" "Use Case"))
+
+# Data Property: :Actual_Result (:Actual_Result)
+
+AnnotationAssertion(rdfs:isDefinedBy :Actual_Result "Actual Results represents the results that are captured after executing a Test Case.")
+DataPropertyDomain(:Actual_Result :Test_Case)
+DataPropertyRange(:Actual_Result xsd:string)
+
+# Data Property: :Address (:Address)
+
+AnnotationAssertion(rdfs:isDefinedBy :Address "Address represents this Location's complete address.")
+DataPropertyDomain(:Address :Physical)
+DataPropertyRange(:Address xsd:string)
+
+# Data Property: :Altitude (:Altitude)
+
+AnnotationAssertion(rdfs:isDefinedBy :Altitude "Altitude represents the distance above the surface.")
+DataPropertyDomain(:Altitude :Physical)
+DataPropertyRange(:Altitude xsd:float)
+
+# Data Property: :Amount (:Amount)
+
+AnnotationAssertion(rdfs:isDefinedBy :Amount "Amount represents this Cost's value.")
+DataPropertyDomain(:Amount :Cost)
+DataPropertyRange(:Amount xsd:float)
+
+# Data Property: :Apoapsis (:Apoapsis)
+
+AnnotationAssertion(rdfs:isDefinedBy :Apoapsis "Apoapsis represents the point of greatest distance from the celestial body being orbited. For Earth, the term is apogee. For the Sun the term commonly used is aphelion. The Apoapsis must be specified with the Periapsis to characterize the orbital ellipse shape.")
+DataPropertyDomain(:Apoapsis :Orbital)
+DataPropertyRange(:Apoapsis xsd:float)
+
+# Data Property: :Argument_of_Periapsis (:Argument_of_Periapsis)
+
+AnnotationAssertion(rdfs:isDefinedBy :Argument_of_Periapsis "Argument of Periapsis represents the angle between the Periapsis and the ascending node as measured in the orbital plane in the direction of motion.")
+DataPropertyDomain(:Argument_of_Periapsis :Orbital)
+DataPropertyRange(:Argument_of_Periapsis xsd:float)
+
+# Data Property: :ArtifactTypes (:ArtifactTypes)
+
+AnnotationAssertion(rdfs:comment :ArtifactTypes "Labels list the types of the entity.")
+DataPropertyDomain(:ArtifactTypes :Artifact)
+DataPropertyRange(:ArtifactTypes DataOneOf("CAD Model" "Concept of Operations Document" "Directive" "Doctrine" "Guidance" "Imported" "Independent Verification & Validation Plan Document" "Instruction" "Integrated Logistics Support Plan Document" "Manual" "Policy" "Project Management Plan Document" "Regulation" "Report" "Requirements Document" "Simulation Output" "Standard" "Standard Operating Procedure Document" "Test Plan Document" "Test Suite" "Trade Study"))
+
+# Data Property: :AssetTypes (:AssetTypes)
+
+AnnotationAssertion(rdfs:comment :AssetTypes "Labels list the types of the entity.")
+DataPropertyDomain(:AssetTypes :Asset)
+DataPropertyRange(:AssetTypes DataOneOf("Architecture" "Block" "Context" "Environment" "External" "Facility" "Infrastructure" "Materiale" "Organization" "Package" "Personnel" "Segment" "Service" "Subsystem" "System"))
+
+# Data Property: :Assumptions (:Assumptions)
+
+AnnotationAssertion(rdfs:isDefinedBy :Assumptions "Assumptions represents facts that are used as a basis for this Decision. These assumptions can be taken for granted by the decision maker.")
+DataPropertyDomain(:Assumptions :Decision)
+DataPropertyRange(:Assumptions xsd:string)
+
+# Data Property: :Capacity (:Capacity)
+
+AnnotationAssertion(rdfs:isDefinedBy :Capacity "Capacity represents the maximum rate supported by the Conduit. (Used in simulation as to add time delay by dividing the Input/Output size with the capacity value.)")
+DataPropertyDomain(:Capacity :Conduit)
+DataPropertyRange(:Capacity xsd:float)
+
+# Data Property: :Category (:Category)
+
+AnnotationAssertion(rdfs:isDefinedBy :Category "Category represents the part of the lifecycle for which the money is used (commonly called Color of Money). This matches the Federal Government (DoD) cost phases.")
+DataPropertyDomain(:Category :Cost)
+DataPropertyRange(:Category DataOneOf("MILCON" "MILPERS" "N/A" "O&M" "Procurement" "RDT&E" "SCN"))
+
+# Data Property: :CharacteristicTypes (:CharacteristicTypes)
+
+AnnotationAssertion(rdfs:comment :CharacteristicTypes "Labels list the types of the entity.")
+DataPropertyDomain(:CharacteristicTypes :Characteristic)
+DataPropertyRange(:CharacteristicTypes DataOneOf("Final State" "Initial State" "State"))
+
+# Data Property: :Clear (:Clear)
+
+AnnotationAssertion(rdfs:isDefinedBy :Clear "Clear represents if this Requirement is unambiguous and not confusing.")
+DataPropertyDomain(:Clear :Requirement)
+DataPropertyRange(:Clear xsd:boolean)
+
+# Data Property: :Complete (:Complete)
+
+AnnotationAssertion(rdfs:isDefinedBy :Complete "Complete represents if this Requirement expresses a whole idea.")
+DataPropertyDomain(:Complete :Requirement)
+DataPropertyRange(:Complete xsd:boolean)
+
+# Data Property: :ConduitTypes (:ConduitTypes)
+
+AnnotationAssertion(rdfs:comment :ConduitTypes "Labels list the types of the entity.")
+DataPropertyDomain(:ConduitTypes :Conduit)
+DataPropertyRange(:ConduitTypes DataOneOf("Aggregation" "Association" "Cable" "Composition" "Downlink" "Interface" "Network" "Pipe" "Roadway" "Uplink" "Wireless"))
+
+# Data Property: :Consequence (:Consequence)
+
+AnnotationAssertion(rdfs:isDefinedBy :Consequence "Consequence represents the level of effect from this Risk occurring. Integer values from 0 to 100 are commonly used or a % datatype can be added.")
+DataPropertyDomain(:Consequence :Risk)
+DataPropertyRange(:Consequence xsd:integer)
+
+# Data Property: :Consequence_Description (:Consequence_Description)
+
+AnnotationAssertion(rdfs:isDefinedBy :Consequence_Description "Consequence Description represents the result of this Risk occurring.")
+DataPropertyDomain(:Consequence_Description :Risk)
+DataPropertyRange(:Consequence_Description xsd:string)
+
+# Data Property: :Consistent (:Consistent)
+
+AnnotationAssertion(rdfs:isDefinedBy :Consistent "Consistent represents if this Requirement is not in conflict with other requirements.")
+DataPropertyDomain(:Consistent :Requirement)
+DataPropertyRange(:Consistent xsd:boolean)
+
+# Data Property: :Contract_Type (:Contract_Type)
+
+AnnotationAssertion(rdfs:comment :Contract_Type "Contract Type represents this Cost way to identify the reimbursement structure (i.e. CPFF vs T&M).")
+DataPropertyDomain(:Contract_Type :Cost)
+DataPropertyRange(:Contract_Type DataOneOf("CPAF" "CPFF" "CPIF" "FFP-Completion" "FFP-LOE" "N/A" "T&M"))
+
+# Data Property: :Coordinates (:Coordinates)
+
+AnnotationAssertion(rdfs:isDefinedBy :Coordinates "Coordinates represents the coordinate points for this Location (GPS or other system). The value will require geo-coordinates.")
+DataPropertyDomain(:Coordinates :Physical)
+
+# Data Property: :Correct (:Correct)
+
+AnnotationAssertion(rdfs:isDefinedBy :Correct "Correct represents if this Requirement describes the user's true intent and is legally possible.")
+DataPropertyDomain(:Correct :Requirement)
+DataPropertyRange(:Correct xsd:boolean)
+
+# Data Property: :CostTypes (:CostTypes)
+
+AnnotationAssertion(rdfs:comment :CostTypes "Labels list the types of the entity.")
+DataPropertyDomain(:CostTypes :Cost)
+DataPropertyRange(:CostTypes DataOneOf("Actual" "Estimated" "Overrun" "Planned"))
+
+# Data Property: :Date_Published (:Date_Published)
+
+AnnotationAssertion(rdfs:isDefinedBy :Date_Published "Date Published represents the date when this Artifact was accessed (webpage), published, or uploaded to the knowledgebase.")
+DataPropertyDomain(:Date_Published :Artifact)
+DataPropertyRange(:Date_Published xsd:dateTime)
+
+# Data Property: :Description (:Description)
+
+AnnotationAssertion(rdfs:isDefinedBy :Description "Description captures the text needed to describe this element.")
+SubDataPropertyOf(:Description owl:topDataProperty)
+
+# Data Property: :Design (:Design)
+
+AnnotationAssertion(rdfs:isDefinedBy :Design "Design represents if this Requirement does not impose a specific solution on design; says \"what\", not \"how.\"")
+DataPropertyDomain(:Design :Requirement)
+DataPropertyRange(:Design xsd:boolean)
+
+# Data Property: :Direction (:Direction)
+
+AnnotationAssertion(rdfs:isDefinedBy :Direction "Direction represents the flow of data on this port.")
+DataPropertyDomain(:Direction :Port)
+DataPropertyRange(:Direction DataOneOf("In" "In and Out" "None" "Out"))
+
+# Data Property: :Duration (:Duration)
+
+AnnotationAssertion(rdfs:isDefinedBy :Duration "Duration represents the period of time this Action occurs.")
+DataPropertyDomain(:Duration :Action)
+DataPropertyRange(:Duration xsd:float)
+
+# Data Property: :Eccentricity (:Eccentricity)
+
+AnnotationAssertion(rdfs:isDefinedBy :Eccentricity "Eccentricity represents the amount the orbit deviates from a perfect circle (0 being perfectly circular and 1 is a parabola - no longer a closed orbit). The Eccentricity must be specified with the Semimajor axis to characterize the orbital ellipse shape.")
+DataPropertyDomain(:Eccentricity :Orbital)
+DataPropertyRange(:Eccentricity xsd:float)
+
+# Data Property: :Equation_Value (:Equation_Value)
+
+AnnotationAssertion(rdfs:isDefinedBy :Equation_Value "Value represents this Equation's text.")
+DataPropertyDomain(:Equation_Value :Equation)
+DataPropertyRange(:Equation_Value xsd:string)
+
+# Data Property: :Expected_Result (:Expected_Result)
+
+AnnotationAssertion(rdfs:isDefinedBy :Expected_Result "Expected Result represents the result expected when executing this Test Case.")
+DataPropertyDomain(:Expected_Result :Test_Case)
+DataPropertyRange(:Expected_Result xsd:string)
+
+# Data Property: :Feasible (:Feasible)
+
+AnnotationAssertion(rdfs:isDefinedBy :Feasible "Feasible represents if this Requirement is able to be implemented with existing technology, and within cost and schedule.")
+DataPropertyDomain(:Feasible :Requirement)
+DataPropertyRange(:Feasible xsd:boolean)
+
+# Data Property: :File (:File)
+
+AnnotationAssertion(rdfs:isDefinedBy :File "The File that represents this Artifact. Used to trace to the storgae location of the electronic file.")
+DataPropertyDomain(:File :Artifact)
+DataPropertyRange(:File xsd:anyURI)
+
+# Data Property: :Improvement_Direction (:Improvement_Direction)
+
+AnnotationAssertion(rdfs:isDefinedBy :Improvement_Direction "Improvement Direction represents the direction in that metric improvement occurs. It is the direction from the Threshold Value to the Objective Value.")
+DataPropertyDomain(:Improvement_Direction :Measure)
+DataPropertyRange(:Improvement_Direction DataOneOf("N/A" "Negative" "Positive"))
+
+# Data Property: :Inclination (:Inclination)
+
+AnnotationAssertion(rdfs:isDefinedBy :Inclination "Inclination represents the angle between the orbital plane and a reference plane, such as the equatorial plane for Earth. The Inclination must be specified with the Longitude of Ascending Node to characterize the orbital plane.")
+DataPropertyDomain(:Inclination :Orbital)
+DataPropertyRange(:Inclination xsd:float)
+
+# Data Property: :Initial_Amount (:Initial_Amount)
+
+AnnotationAssertion(rdfs:isDefinedBy :Initial_Amount "Initial Amount represents this Resource's starting amount.")
+DataPropertyDomain(:Initial_Amount :Resource)
+DataPropertyRange(:Initial_Amount xsd:float)
+
+# Data Property: :Justification (:Justification)
+
+AnnotationAssertion(rdfs:isDefinedBy :Justification "Justification represents the reason and context for making this Decision.")
+DataPropertyDomain(:Justification :Decision)
+DataPropertyRange(:Justification xsd:string)
+
+# Data Property: :Latency (:Latency)
+
+AnnotationAssertion(rdfs:isDefinedBy :Latency "Latency represents the time required to transmit the information or Input/Output entity over this Conduit. This value does not factor in any delays due to capacity limitations.")
+DataPropertyDomain(:Latency :Conduit)
+DataPropertyRange(:Latency xsd:float)
+
+# Data Property: :Longitude_of_Ascending_Node (:Longitude_of_Ascending_Node)
+
+AnnotationAssertion(rdfs:isDefinedBy :Longitude_of_Ascending_Node "Longitude of Ascending Node represents the angle from the Origin of Longitude to the ascending node, measured in the Reference Plane. For the Earth, the origin of longitude is typically the Prime Meridian. The Longitude of Ascending Node must be specified with the Inclination to characterize the orbital plane.")
+DataPropertyDomain(:Longitude_of_Ascending_Node :Orbital)
+DataPropertyRange(:Longitude_of_Ascending_Node xsd:float)
+
+# Data Property: :Maximum_Amount (:Maximum_Amount)
+
+AnnotationAssertion(rdfs:isDefinedBy :Maximum_Amount "Maximum Amount represents this Resource's maximum amount allowed.")
+DataPropertyDomain(:Maximum_Amount :Resource)
+DataPropertyRange(:Maximum_Amount xsd:float)
+
+# Data Property: :Mean_Anomaly (:Mean_Anomaly)
+
+AnnotationAssertion(rdfs:isDefinedBy :Mean_Anomaly "Mean Anomaly represents the proportion of orbital area swept since the last Periapsis at the specified time. It is used to define the position of the orbiting Asset along the orbital ellipse.")
+DataPropertyDomain(:Mean_Anomaly :Orbital)
+DataPropertyRange(:Mean_Anomaly xsd:float)
+
+# Data Property: :MeasureTypes (:MeasureTypes)
+
+AnnotationAssertion(rdfs:comment :MeasureTypes "Labels list the types of the entity.")
+DataPropertyDomain(:MeasureTypes :Measure)
+DataPropertyRange(:MeasureTypes DataOneOf("COI" "Criteria" "Criteria Occurrence" "Discrete Time Test" "Discrete Time Test Value" "KPP" "MOE" "MOP" "MOS" "TPM" "TPM Plan"))
+
+# Data Property: :Minimum_Amount (:Minimum_Amount)
+
+AnnotationAssertion(rdfs:isDefinedBy :Minimum_Amount "Minimum Amount represents this Resource's minimum amount allowed.")
+DataPropertyDomain(:Minimum_Amount :Resource)
+DataPropertyRange(:Minimum_Amount xsd:float)
+
+# Data Property: :Modular (:Modular)
+
+AnnotationAssertion(rdfs:isDefinedBy :Modular "Modular represents if this Requirement can be changed without excessive impact on other requirements.")
+DataPropertyDomain(:Modular :Requirement)
+DataPropertyRange(:Modular xsd:boolean)
+
+# Data Property: :Name (:Name)
+
+AnnotationAssertion(rdfs:isDefinedBy :Name "Name designates the particular instance of an entity called element.")
+SubDataPropertyOf(:Name owl:topDataProperty)
+
+# Data Property: :Number (:Number)
+
+AnnotationAssertion(rdfs:isDefinedBy :Number "Number provides the element’s place in a hierarchy.")
+SubDataPropertyOf(:Number owl:topDataProperty)
+
+# Data Property: :Objective_Value (:Objective_Value)
+
+AnnotationAssertion(rdfs:isDefinedBy :Objective_Value "Objective Value represents the goal for this Measure.")
+DataPropertyDomain(:Objective_Value :Measure)
+DataPropertyRange(:Objective_Value xsd:float)
+
+# Data Property: :Origin_of_Longitude (:Origin_of_Longitude)
+
+AnnotationAssertion(rdfs:isDefinedBy :Origin_of_Longitude "Origin of Longitude represents the reference meridian from where the Longitude of Ascending Node will be calculated.")
+DataPropertyDomain(:Origin_of_Longitude :Orbital)
+DataPropertyRange(:Origin_of_Longitude xsd:string)
+
+# Data Property: :Percent_Complete (:Percent_Complete)
+
+AnnotationAssertion(rdfs:isDefinedBy :Percent_Complete "Percent Complete represents the percentage this Action is complete. Integer values from 0 to 100 are commonly used or a % datatype can be added.")
+DataPropertyDomain(:Percent_Complete :Action)
+DataPropertyRange(:Percent_Complete xsd:integer)
+
+# Data Property: :Periapsis (:Periapsis)
+
+AnnotationAssertion(rdfs:isDefinedBy :Periapsis "Periapsis represents the point of closest distance from the celestial body being orbited. For Earth, the term is perigee. For the Sun the term commonly used is perihelion. The Periapsis must be specified with the Apoapsis to characterize the orbital ellipse shape.")
+DataPropertyDomain(:Periapsis :Orbital)
+DataPropertyRange(:Periapsis xsd:float)
+
+# Data Property: :Probability (:Probability)
+
+AnnotationAssertion(rdfs:isDefinedBy :Probability "Probability represents the chance that this Risk will occur. Integer values from 0 to 100 are commonly used or a % datatype can be added.")
+DataPropertyDomain(:Probability :Risk)
+DataPropertyRange(:Probability xsd:integer)
+
+# Data Property: :Projected_Value (:Projected_Value)
+
+AnnotationAssertion(rdfs:isDefinedBy :Projected_Value "Projected Value represents this Measure's expected value to be achieved with existing resources.")
+DataPropertyDomain(:Projected_Value :Measure)
+DataPropertyRange(:Projected_Value xsd:float)
+
+# Data Property: :Rate (:Rate)
+
+AnnotationAssertion(rdfs:isDefinedBy :Rate "Rate represents this Cost's billing rate.")
+DataPropertyDomain(:Rate :Cost)
+DataPropertyRange(:Rate DataOneOf("Fixed" "Per Hour"))
+
+# Data Property: :Rationale (:Rationale)
+
+AnnotationAssertion(rdfs:isDefinedBy :Rationale "Rationale provides a place to capture the reason(s) behind this Requirement.")
+DataPropertyDomain(:Rationale :Requirement)
+DataPropertyRange(:Rationale xsd:string)
+
+# Data Property: :Reference_Plane (:Reference_Plane)
+
+AnnotationAssertion(rdfs:isDefinedBy :Reference_Plane "Reference Plane represents the reference plane from where the Inclination angle will be calculated.")
+DataPropertyDomain(:Reference_Plane :Orbital)
+DataPropertyRange(:Reference_Plane xsd:string)
+
+# Data Property: :RequirementTypes (:RequirementTypes)
+
+AnnotationAssertion(rdfs:comment :RequirementTypes "Labels list the types of the entity.")
+DataPropertyDomain(:RequirementTypes :Requirement)
+DataPropertyRange(:RequirementTypes DataOneOf("Analysis" "Demonstration" "Environmental Requirement" "Functional Requirement" "Inspection" "Interface Requirement" "Modeling & Simulation" "Performance Requirement" "Reliability Requirement" "Safety Requirement" "Test" "Verification Method" "Verification Requirement"))
+
+# Data Property: :RiskTypes (:RiskTypes)
+
+AnnotationAssertion(rdfs:comment :RiskTypes "Labels list the types of the entity.")
+DataPropertyDomain(:RiskTypes :Risk)
+DataPropertyRange(:RiskTypes DataOneOf("Cost" "Other" "Schedule" "Technical"))
+
+# Data Property: :Risk_Status (:Risk_Status)
+
+AnnotationAssertion(rdfs:isDefinedBy :Risk_Status "Status represents the current state of this Risk.")
+DataPropertyDomain(:Risk_Status :Risk)
+DataPropertyRange(:Risk_Status DataOneOf("Declined" "Duplicate" "Open" "Resolved"))
+
+# Data Property: :Semimajor_Axis (:Semimajor_Axis)
+
+AnnotationAssertion(rdfs:isDefinedBy :Semimajor_Axis "Semimajor Axis represents the one half of the length of the longest diameter of the orbital ellipse. The Semimajor axis must be specified with the Eccentricity to characterize the orbital ellipse shape.")
+DataPropertyDomain(:Semimajor_Axis :Orbital)
+DataPropertyRange(:Semimajor_Axis xsd:float)
+
+# Data Property: :Set_Up (:Set_Up)
+
+AnnotationAssertion(rdfs:isDefinedBy :Set_Up "Set Up represents the prerequisites that must be fulfilled before executing this Test Case.")
+DataPropertyDomain(:Set_Up :Test_Case)
+DataPropertyRange(:Set_Up xsd:string)
+
+# Data Property: :Size (:Size)
+
+AnnotationAssertion(rdfs:isDefinedBy :Size "Size represents the amount or proportion of this Input/Output, such as 100 as in 100 Gigabytes or number of entities (e.g. 10 as in 10 tokens).")
+DataPropertyDomain(:Size <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+DataPropertyRange(:Size xsd:float)
+
+# Data Property: :Start (:Start)
+
+AnnotationAssertion(rdfs:isDefinedBy :Start "Start represents the time when this Action begins")
+SubDataPropertyOf(:Start owl:topDataProperty)
+DataPropertyDomain(:Start :Action)
+DataPropertyRange(:Start xsd:dateTime)
+
+# Data Property: :StatementTypes (:StatementTypes)
+
+AnnotationAssertion(rdfs:comment :StatementTypes "Labels list the types of the entity.")
+DataPropertyDomain(:StatementTypes :Statement)
+DataPropertyRange(:StatementTypes DataOneOf("Acronym" "Assumption" "Constraint" "Definition" "Goal" "Objective" "Purpose" "Reference" "Scope"))
+
+# Data Property: :TC_Status (:TC_Status)
+
+AnnotationAssertion(rdfs:isDefinedBy :TC_Status "Status represents the current state of this Test Case.")
+DataPropertyDomain(:TC_Status :Test_Case)
+DataPropertyRange(:TC_Status DataOneOf("Blocked" "Failed" "In Progress" "Not Run" "Passed"))
+
+# Data Property: :Threshold_Value (:Threshold_Value)
+
+AnnotationAssertion(rdfs:isDefinedBy :Threshold_Value "Threshold Value represents the minimum acceptable value for this Measure.")
+DataPropertyDomain(:Threshold_Value :Measure)
+DataPropertyRange(:Threshold_Value xsd:float)
+
+# Data Property: :TimeTypes (:TimeTypes)
+
+AnnotationAssertion(rdfs:comment :TimeTypes "Labels list the types of the entity.")
+DataPropertyDomain(:TimeTypes :Time)
+DataPropertyRange(:TimeTypes DataOneOf("Milestone" "Point In Time" "Time Frame"))
+
+# Data Property: :Time_Duration (:Time_Duration)
+
+AnnotationAssertion(rdfs:isDefinedBy :Time_Duration "Duration represents the period of time this Time occurs.")
+DataPropertyDomain(:Time_Duration :Time)
+DataPropertyRange(:Time_Duration xsd:float)
+
+# Data Property: :Time_Start (:Time_Start)
+
+AnnotationAssertion(rdfs:isDefinedBy :Time_Start "Start represents the time when this Time begins.")
+DataPropertyDomain(:Time_Start :Time)
+DataPropertyRange(:Time_Start xsd:dateTime)
+
+# Data Property: :Tolerance (:Tolerance)
+
+AnnotationAssertion(rdfs:isDefinedBy :Tolerance "Tolerance represents the percentage of the value that forms the positive and negative tolerance bands. Tolerance is used when Value represents the planned measure value at a given time. Integer values from 0 to 100 are commonly used or a % datatype can be added.")
+DataPropertyDomain(:Tolerance :Measure)
+DataPropertyRange(:Tolerance xsd:integer)
+
+# Data Property: :Traceable (:Traceable)
+
+AnnotationAssertion(rdfs:isDefinedBy :Traceable "Traceable represents if this Requirement is uniquely identified, and able to be tracked to predecessor and successor lifecycle items/objects.")
+DataPropertyDomain(:Traceable :Requirement)
+DataPropertyRange(:Traceable xsd:boolean)
+
+# Data Property: :Units (:Units)
+
+AnnotationAssertion(rdfs:isDefinedBy :Units "Units represents this entity's units used to measure the amounts, such as each or tons.")
+DataPropertyDomain(:Units :Action)
+DataPropertyDomain(:Units :Characteristic)
+DataPropertyDomain(:Units :Conduit)
+DataPropertyDomain(:Units :Orbital)
+DataPropertyDomain(:Units :Physical)
+DataPropertyDomain(:Units :Resource)
+DataPropertyDomain(:Units :Time)
+DataPropertyDomain(:Units <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+DataPropertyRange(:Units xsd:string)
+
+# Data Property: :Verifiable (:Verifiable)
+
+AnnotationAssertion(rdfs:isDefinedBy :Verifiable "Verifiable represents if this Requirement is provable (within realistic cost and schedule) that the system meets the requirement.")
+DataPropertyDomain(:Verifiable :Requirement)
+DataPropertyRange(:Verifiable xsd:boolean)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Action (:Action)
+
+AnnotationAssertion(rdfs:isDefinedBy :Action "An Action entity specifies the mechanism by which inputs are transformed into outputs.")
+
+# Class: :Artifact (:Artifact)
+
+AnnotationAssertion(rdfs:isDefinedBy :Artifact "An Artifact entity specifies a document or other source of information that is referenced by or generated in the knowledgebase.")
+
+# Class: :Asset (:Asset)
+
+AnnotationAssertion(rdfs:isDefinedBy :Asset "An Asset entity specifies an object, person, or organization that performs Actions, such as a system, subsystem, component, or element.")
+
+# Class: :Characteristic (:Characteristic)
+
+AnnotationAssertion(rdfs:isDefinedBy :Characteristic "A Characteristic entity specifies properties of an entity.")
+
+# Class: :Conduit (:Conduit)
+
+AnnotationAssertion(rdfs:isDefinedBy :Conduit "A Conduit entity specifies the connection between Assets and has capacity and latency, which carries an Input/Output.")
+SubClassOf(:Conduit :Connection)
+
+# Class: :Connection (:Connection)
+
+AnnotationAssertion(rdfs:isDefinedBy :Connection "A Connection entity specifies the mechanism relating Assets. This is an abstract class.")
+
+# Class: :Cost (:Cost)
+
+AnnotationAssertion(rdfs:isDefinedBy :Cost "A Cost entity specifies the outlay or expenditure (as of effort or sacrifice) made to achieve an objective associated with another entity.")
+
+# Class: :Decision (:Decision)
+
+AnnotationAssertion(rdfs:isDefinedBy :Decision "A Decision entity specifies a challenge and its resolution.")
+
+# Class: :Equation (:Equation)
+
+AnnotationAssertion(rdfs:isDefinedBy :Equation "An Equation entity specifies an equation (mathematical or logical) that can be used to describe a part of the model. Used as part of the SysML extension in LML v. 1.1.")
+
+# Class: :Location (:Location)
+
+AnnotationAssertion(rdfs:isDefinedBy :Location "A Location entity specifies where an entity resides.")
+
+# Class: :Logical (:Logical)
+
+AnnotationAssertion(rdfs:isDefinedBy :Logical "A Logical entity specifies relationship between Assets. It is primarily used in database schema development and entity-relationship diagrams.")
+SubClassOf(:Logical :Connection)
+
+# Class: :Measure (:Measure)
+
+AnnotationAssertion(rdfs:isDefinedBy :Measure "A Measure entity specifies properties of measurements and measuring methodologies, including metrics.")
+SubClassOf(:Measure :Characteristic)
+
+# Class: :Orbital (:Orbital)
+
+AnnotationAssertion(rdfs:isDefinedBy :Orbital "An Orbital entity specifies a location along an orbit around a celestial body.")
+SubClassOf(:Orbital :Location)
+
+# Class: :Physical (:Physical)
+
+AnnotationAssertion(rdfs:isDefinedBy :Physical "A Physical entity specifies a location on or above the surface.")
+SubClassOf(:Physical :Location)
+
+# Class: :Port (:Port)
+
+AnnotationAssertion(rdfs:isDefinedBy :Port "An interaction point of a block, specifying the input and output flow. Used as part of the SysML extension in LML v. 1.1.")
+SubClassOf(:Port :Asset)
+
+# Class: :Requirement (:Requirement)
+
+AnnotationAssertion(rdfs:isDefinedBy :Requirement "A Requirement entity identifies a capability, characteristic, or quality factor of a system that must exist for the system to have value and utility to the user.")
+SubClassOf(:Requirement :Statement)
+
+# Class: :Resource (:Resource)
+
+AnnotationAssertion(rdfs:isDefinedBy :Resource "A Resource entity specifies a consumable or producible Asset.")
+SubClassOf(:Resource :Asset)
+
+# Class: :Risk (:Risk)
+
+AnnotationAssertion(rdfs:isDefinedBy :Risk "A Risk entity specifies the combined probability and consequence in achieving objectives.")
+
+# Class: :Statement (:Statement)
+
+AnnotationAssertion(rdfs:isDefinedBy :Statement "A Statement entity specifies text referenced by the knowledgebase and usually contain in an Artifact.")
+
+# Class: :Test_Case (:Test_Case)
+
+AnnotationAssertion(rdfs:isDefinedBy :Test_Case "A Test Case entity represents a set of conditions utilized to determine whether a system works as intended. Extension to LML for Innoslate's Test Center, which enhanced the support for the V&V phase of the lifecycle.")
+SubClassOf(:Test_Case :Action)
+
+# Class: :Time (:Time)
+
+AnnotationAssertion(rdfs:isDefinedBy :Time "A Time entity specifies a point or period when something occurs or during which an action, asset, process, or condition exists or continues.")
+
+# Class: :Virtual (:Virtual)
+
+AnnotationAssertion(rdfs:isDefinedBy :Virtual "A Virtual entity specifies a location within a digital network.")
+SubClassOf(:Virtual :Location)
+
+# Class: <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output> (<http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#Input/Output> "An Input/Output entity specifies the information, data, or object input to, triggers, or output from an Action.")
+
+
+)
