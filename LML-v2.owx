@@ -1,0 +1,4493 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/stevendam/ontologies/2017/4/lifecyclemodelinglanguage.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The Lifecycle Modeling Language (LML) was developed to provide a more complete ontology for systems engineering and program management than was available at the time of its creation (October 2013). LML was prototyped and implemented in a commercial tool (Innoslate) beginning in 2012. The specification for 1.1 can be found at www.lifecyclemodelinglanguage.org. This OWL library represents the implemented LML in Innsolate as of June 2017.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cost_Risk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Dependency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Major_Decision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Schedule_RIsk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical_Risk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Verification_Requirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Artifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Characteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conduit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Connection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Decision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orbital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Requirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Risk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Test_Case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Virtual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Input/Output"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#alternative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#alternative_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#caused_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connected_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connects_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consumed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consumes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#copied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#copies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#date_resolved_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#date_resolves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#decided_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#decision_due"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#decomposed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#decomposes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defined_protocol_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defines_protocol_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#depends_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#derived_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#derives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#enabled_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#enables"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#equation_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#equation_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#extend"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#extended_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fetched_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fetches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#generated_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#generates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_dependent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#include"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#included_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#incurred_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#incurs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#joined_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#joins"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#located_at"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#made"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#made_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mitigated_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mitigates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occurred_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occurs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#orbited_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#orbits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pushed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pushes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#received_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#receives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#references"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#references_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refined_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represented_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#resolved_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#resolves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#responded_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#responds_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#result_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#results_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#satisfied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#satisfies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seized_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seizes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#source_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sourced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#traced_from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#traced_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transferred_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transfers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#variable_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#verified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#verifies"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ActionTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Actual_Result"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Altitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Apoapsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Argument_of_Periapsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ArtifactTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AssetTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Assumptions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Capacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Category"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CharacteristicTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Clear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Complete"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ConduitTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Consequence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Consequence_Description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Consistent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Contract_Type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Coordinates"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Correct"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CostTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Date_Published"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Design"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Direction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Eccentricity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Equation_Value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Expected_Result"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Feasible"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#File"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Improvement_Direction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Inclination"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Initial_Amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Justification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Latency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Longitude_of_Ascending_Node"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Maximum_Amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Mean_Anomaly"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#MeasureTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Minimum_Amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Modular"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Objective_Value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Origin_of_Longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Percent_Complete"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Periapsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Probability"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Projected_Value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Rate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Rationale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Reference_Plane"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#RequirementTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#RiskTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Risk_Status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Semimajor_Axis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Set_Up"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Start"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#StatementTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TC_Status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Threshold_Value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TimeTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Time_Duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Time_Start"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Tolerance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Traceable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Units"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Verifiable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Bullets"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Component"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Document"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Email"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Fuel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Latitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Longitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Missiles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Procedure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Street_Address"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Subsystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#System"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#URL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#milestone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#orbit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#phase"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#URI"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#bigText"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#geoPoint"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#multiSelect"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#quality"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#text"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.co-ode.org/ontologies/ont.owl#userName"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cost_Risk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Dependency"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Major_Decision"/>
+        <Class IRI="#Decision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Schedule_RIsk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Task"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical_Risk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Verification_Requirement"/>
+        <Class IRI="#Requirement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conduit"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logical"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Measure"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orbital"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Port"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Requirement"/>
+        <Class IRI="#Statement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resource"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test_Case"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Virtual"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Resource"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Bullets"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asset"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Component"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Artifact"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Document"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Artifact"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Email"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Resource"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Fuel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Physical"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Latitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Physical"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Longitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Resource"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Missiles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Artifact"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Procedure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Physical"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Street_Address"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asset"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Subsystem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asset"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#System"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Virtual"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#URL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#milestone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Orbital"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#orbit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#phase"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#decomposed_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#decomposes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#related_to"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#relates"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#alternative"/>
+        <ObjectProperty IRI="#alternative_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#caused_by"/>
+        <ObjectProperty IRI="#causes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#connected_by"/>
+        <ObjectProperty IRI="#connects_to"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#consumed_by"/>
+        <ObjectProperty IRI="#consumes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#copied_by"/>
+        <ObjectProperty IRI="#copies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#date_resolved_by"/>
+        <ObjectProperty IRI="#date_resolves"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#decided_by"/>
+        <ObjectProperty IRI="#decision_due"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#decomposed_by"/>
+        <ObjectProperty IRI="#decomposes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#defined_protocol_by"/>
+        <ObjectProperty IRI="#defines_protocol_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#derived_by"/>
+        <ObjectProperty IRI="#derives"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#enabled_by"/>
+        <ObjectProperty IRI="#enables"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#equation_for"/>
+        <ObjectProperty IRI="#equation_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#extend"/>
+        <ObjectProperty IRI="#extended_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#fetched_by"/>
+        <ObjectProperty IRI="#fetches"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#generated_by"/>
+        <ObjectProperty IRI="#generates"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_variable"/>
+        <ObjectProperty IRI="#variable_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#include"/>
+        <ObjectProperty IRI="#included_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#joined_by"/>
+        <ObjectProperty IRI="#joins"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#located_at"/>
+        <ObjectProperty IRI="#locates"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#made"/>
+        <ObjectProperty IRI="#made_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <ObjectProperty IRI="#mitigates"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#occurred_by"/>
+        <ObjectProperty IRI="#occurs"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#orbited_by"/>
+        <ObjectProperty IRI="#orbits"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#performed_by"/>
+        <ObjectProperty IRI="#performs"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#produced_by"/>
+        <ObjectProperty IRI="#produces"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#pushed_by"/>
+        <ObjectProperty IRI="#pushes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#received_by"/>
+        <ObjectProperty IRI="#receives"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#references"/>
+        <ObjectProperty IRI="#references_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#refined_by"/>
+        <ObjectProperty IRI="#refines"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#related_to"/>
+        <ObjectProperty IRI="#relates"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#represented_in"/>
+        <ObjectProperty IRI="#represents"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#resolved_by"/>
+        <ObjectProperty IRI="#resolves"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#responded_by"/>
+        <ObjectProperty IRI="#responds_to"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#result_of"/>
+        <ObjectProperty IRI="#results_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <ObjectProperty IRI="#satisfies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#seized_by"/>
+        <ObjectProperty IRI="#seizes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#source_of"/>
+        <ObjectProperty IRI="#sourced_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#specified_by"/>
+        <ObjectProperty IRI="#specifies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#traced_from"/>
+        <ObjectProperty IRI="#traced_to"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#transferred_by"/>
+        <ObjectProperty IRI="#transfers"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#verified_by"/>
+        <ObjectProperty IRI="#verifies"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#alternative"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#alternative_of"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#connected_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#connects_to"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consumed_by"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consumes"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#copied_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#copies"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#date_resolved_by"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#date_resolves"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#decided_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#decision_due"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defined_protocol_by"/>
+        <Class IRI="#Conduit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defines_protocol_for"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#depends_on"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#derived_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#derives"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Equation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#extend"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#extended_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fetched_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fetches"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#generated_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#generates"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_dependent"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_variable"/>
+        <Class IRI="#Equation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#include"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#included_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#joined_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#joins"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#made"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#made_by"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#orbited_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#orbits"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#performed_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produced_by"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pushed_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pushes"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#received_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#receives"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refined_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refines"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#represented_in"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#responded_by"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#responds_to"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seized_by"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seizes"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#source_of"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sourced_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#transferred_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#transfers"/>
+        <Class IRI="#Conduit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#variable_of"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#alternative"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#alternative_of"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causes"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#connected_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#connects_to"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consumed_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consumes"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#copied_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#copies"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#date_resolved_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#date_resolves"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#decided_by"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#decision_due"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defined_protocol_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defines_protocol_for"/>
+        <Class IRI="#Conduit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#depends_on"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#derived_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#derives"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enabled_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enables"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_for"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equation_of"/>
+        <Class IRI="#Equation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#extend"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#extended_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fetched_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fetches"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#generated_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#generates"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_dependent"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_variable"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#include"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#included_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurred_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#incurs"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#joined_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#joins"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#located_at"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locates"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#made"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#made_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigated_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurred_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurs"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#orbited_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#orbits"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#performed_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produced_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pushed_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pushes"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#received_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#receives"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#references_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refined_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refines"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#represented_in"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolved_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolves"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#responded_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#responds_to"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#result_of"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#results_in"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfied_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seized_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seizes"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#source_of"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sourced_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specified_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_from"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Statement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#traced_to"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#transferred_by"/>
+        <Class IRI="#Conduit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#transfers"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#variable_of"/>
+        <Class IRI="#Equation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Cost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verified_by"/>
+        <Class IRI="#Input/Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#verifies"/>
+        <Class IRI="#Requirement"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Description"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Number"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Start"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ActionTypes"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Actual_Result"/>
+        <Class IRI="#Test_Case"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Address"/>
+        <Class IRI="#Physical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Altitude"/>
+        <Class IRI="#Physical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Amount"/>
+        <Class IRI="#Cost"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Apoapsis"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Argument_of_Periapsis"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ArtifactTypes"/>
+        <Class IRI="#Artifact"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AssetTypes"/>
+        <Class IRI="#Asset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Assumptions"/>
+        <Class IRI="#Decision"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Capacity"/>
+        <Class IRI="#Conduit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Category"/>
+        <Class IRI="#Cost"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CharacteristicTypes"/>
+        <Class IRI="#Characteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Clear"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Complete"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ConduitTypes"/>
+        <Class IRI="#Conduit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Consequence"/>
+        <Class IRI="#Risk"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Consequence_Description"/>
+        <Class IRI="#Risk"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Consistent"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Contract_Type"/>
+        <Class IRI="#Cost"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Coordinates"/>
+        <Class IRI="#Physical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Correct"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CostTypes"/>
+        <Class IRI="#Cost"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Date_Published"/>
+        <Class IRI="#Artifact"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Design"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Direction"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Duration"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Eccentricity"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Equation_Value"/>
+        <Class IRI="#Equation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Expected_Result"/>
+        <Class IRI="#Test_Case"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Feasible"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#File"/>
+        <Class IRI="#Artifact"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Improvement_Direction"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Inclination"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Initial_Amount"/>
+        <Class IRI="#Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Justification"/>
+        <Class IRI="#Decision"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Latency"/>
+        <Class IRI="#Conduit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Longitude_of_Ascending_Node"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Maximum_Amount"/>
+        <Class IRI="#Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Mean_Anomaly"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MeasureTypes"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Minimum_Amount"/>
+        <Class IRI="#Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Modular"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Objective_Value"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Origin_of_Longitude"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Percent_Complete"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Periapsis"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Probability"/>
+        <Class IRI="#Risk"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Projected_Value"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Rate"/>
+        <Class IRI="#Cost"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Rationale"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Reference_Plane"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#RequirementTypes"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#RiskTypes"/>
+        <Class IRI="#Risk"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Risk_Status"/>
+        <Class IRI="#Risk"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Semimajor_Axis"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Set_Up"/>
+        <Class IRI="#Test_Case"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Size"/>
+        <Class IRI="#Input/Output"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Start"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#StatementTypes"/>
+        <Class IRI="#Statement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TC_Status"/>
+        <Class IRI="#Test_Case"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Threshold_Value"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TimeTypes"/>
+        <Class IRI="#Time"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Time_Duration"/>
+        <Class IRI="#Time"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Time_Start"/>
+        <Class IRI="#Time"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Tolerance"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Traceable"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Characteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Conduit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Orbital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Physical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Time"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Units"/>
+        <Class IRI="#Input/Output"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Verifiable"/>
+        <Class IRI="#Requirement"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#ActionTypes"/>
+        <DataOneOf>
+            <Literal>Activity</Literal>
+            <Literal>Capability</Literal>
+            <Literal>Function</Literal>
+            <Literal>Mission</Literal>
+            <Literal>Process</Literal>
+            <Literal>Program</Literal>
+            <Literal>Project</Literal>
+            <Literal>Task</Literal>
+            <Literal>Use Case</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Actual_Result"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Altitude"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Amount"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Apoapsis"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Argument_of_Periapsis"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ArtifactTypes"/>
+        <DataOneOf>
+            <Literal>CAD Model</Literal>
+            <Literal>Concept of Operations Document</Literal>
+            <Literal>Directive</Literal>
+            <Literal>Doctrine</Literal>
+            <Literal>Guidance</Literal>
+            <Literal>Imported</Literal>
+            <Literal>Independent Verification &amp; Validation Plan Document</Literal>
+            <Literal>Instruction</Literal>
+            <Literal>Integrated Logistics Support Plan Document</Literal>
+            <Literal>Manual</Literal>
+            <Literal>Policy</Literal>
+            <Literal>Project Management Plan Document</Literal>
+            <Literal>Regulation</Literal>
+            <Literal>Report</Literal>
+            <Literal>Requirements Document</Literal>
+            <Literal>Simulation Output</Literal>
+            <Literal>Standard</Literal>
+            <Literal>Standard Operating Procedure Document</Literal>
+            <Literal>Test Plan Document</Literal>
+            <Literal>Test Suite</Literal>
+            <Literal>Trade Study</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AssetTypes"/>
+        <DataOneOf>
+            <Literal>Architecture</Literal>
+            <Literal>Block</Literal>
+            <Literal>Context</Literal>
+            <Literal>Environment</Literal>
+            <Literal>External</Literal>
+            <Literal>Facility</Literal>
+            <Literal>Infrastructure</Literal>
+            <Literal>Materiale</Literal>
+            <Literal>Organization</Literal>
+            <Literal>Package</Literal>
+            <Literal>Personnel</Literal>
+            <Literal>Segment</Literal>
+            <Literal>Service</Literal>
+            <Literal>Subsystem</Literal>
+            <Literal>System</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Assumptions"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Capacity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Category"/>
+        <DataOneOf>
+            <Literal>MILCON</Literal>
+            <Literal>MILPERS</Literal>
+            <Literal>N/A</Literal>
+            <Literal>O&amp;M</Literal>
+            <Literal>Procurement</Literal>
+            <Literal>RDT&amp;E</Literal>
+            <Literal>SCN</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CharacteristicTypes"/>
+        <DataOneOf>
+            <Literal>Final State</Literal>
+            <Literal>Initial State</Literal>
+            <Literal>State</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Clear"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Complete"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ConduitTypes"/>
+        <DataOneOf>
+            <Literal>Aggregation</Literal>
+            <Literal>Association</Literal>
+            <Literal>Cable</Literal>
+            <Literal>Composition</Literal>
+            <Literal>Downlink</Literal>
+            <Literal>Interface</Literal>
+            <Literal>Network</Literal>
+            <Literal>Pipe</Literal>
+            <Literal>Roadway</Literal>
+            <Literal>Uplink</Literal>
+            <Literal>Wireless</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Consequence"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Consequence_Description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Consistent"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Contract_Type"/>
+        <DataOneOf>
+            <Literal>CPAF</Literal>
+            <Literal>CPFF</Literal>
+            <Literal>CPIF</Literal>
+            <Literal>FFP-Completion</Literal>
+            <Literal>FFP-LOE</Literal>
+            <Literal>N/A</Literal>
+            <Literal>T&amp;M</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Correct"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CostTypes"/>
+        <DataOneOf>
+            <Literal>Actual</Literal>
+            <Literal>Estimated</Literal>
+            <Literal>Overrun</Literal>
+            <Literal>Planned</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Date_Published"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Design"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Direction"/>
+        <DataOneOf>
+            <Literal>In</Literal>
+            <Literal>In and Out</Literal>
+            <Literal>None</Literal>
+            <Literal>Out</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Duration"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Eccentricity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Equation_Value"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Expected_Result"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Feasible"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#File"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Improvement_Direction"/>
+        <DataOneOf>
+            <Literal>N/A</Literal>
+            <Literal>Negative</Literal>
+            <Literal>Positive</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Inclination"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Initial_Amount"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Justification"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Latency"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Longitude_of_Ascending_Node"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Maximum_Amount"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Mean_Anomaly"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MeasureTypes"/>
+        <DataOneOf>
+            <Literal>COI</Literal>
+            <Literal>Criteria</Literal>
+            <Literal>Criteria Occurrence</Literal>
+            <Literal>Discrete Time Test</Literal>
+            <Literal>Discrete Time Test Value</Literal>
+            <Literal>KPP</Literal>
+            <Literal>MOE</Literal>
+            <Literal>MOP</Literal>
+            <Literal>MOS</Literal>
+            <Literal>TPM</Literal>
+            <Literal>TPM Plan</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Minimum_Amount"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Modular"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Objective_Value"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Origin_of_Longitude"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Percent_Complete"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Periapsis"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Probability"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Projected_Value"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Rate"/>
+        <DataOneOf>
+            <Literal>Fixed</Literal>
+            <Literal>Per Hour</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Rationale"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Reference_Plane"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#RequirementTypes"/>
+        <DataOneOf>
+            <Literal>Analysis</Literal>
+            <Literal>Demonstration</Literal>
+            <Literal>Environmental Requirement</Literal>
+            <Literal>Functional Requirement</Literal>
+            <Literal>Inspection</Literal>
+            <Literal>Interface Requirement</Literal>
+            <Literal>Modeling &amp; Simulation</Literal>
+            <Literal>Performance Requirement</Literal>
+            <Literal>Reliability Requirement</Literal>
+            <Literal>Safety Requirement</Literal>
+            <Literal>Test</Literal>
+            <Literal>Verification Method</Literal>
+            <Literal>Verification Requirement</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#RiskTypes"/>
+        <DataOneOf>
+            <Literal>Cost</Literal>
+            <Literal>Other</Literal>
+            <Literal>Schedule</Literal>
+            <Literal>Technical</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Risk_Status"/>
+        <DataOneOf>
+            <Literal>Declined</Literal>
+            <Literal>Duplicate</Literal>
+            <Literal>Open</Literal>
+            <Literal>Resolved</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Semimajor_Axis"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Set_Up"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Size"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Start"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#StatementTypes"/>
+        <DataOneOf>
+            <Literal>Acronym</Literal>
+            <Literal>Assumption</Literal>
+            <Literal>Constraint</Literal>
+            <Literal>Definition</Literal>
+            <Literal>Goal</Literal>
+            <Literal>Objective</Literal>
+            <Literal>Purpose</Literal>
+            <Literal>Reference</Literal>
+            <Literal>Scope</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TC_Status"/>
+        <DataOneOf>
+            <Literal>Blocked</Literal>
+            <Literal>Failed</Literal>
+            <Literal>In Progress</Literal>
+            <Literal>Not Run</Literal>
+            <Literal>Passed</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Threshold_Value"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TimeTypes"/>
+        <DataOneOf>
+            <Literal>Milestone</Literal>
+            <Literal>Point In Time</Literal>
+            <Literal>Time Frame</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Time_Duration"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Time_Start"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Tolerance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Traceable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Units"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Verifiable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#Dependency</IRI>
+        <Literal>A Dependency entity specifies a connection between two Tasks in a Gantt Chart. It defines the relationship a Task depends on another Task in order to Start or Finish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#Task</IRI>
+        <Literal>A Task entity specifies an Action that must be completed for a particular project. It serves as a &quot;ToDo&quot; for the Project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#URI</IRI>
+        <Literal>A special case of Text where the value must be a Uniform Resource Identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#Verification_Requirement</IRI>
+        <Literal>A Verification Requirement entity specifies what is required to confirm that a requirement is satisfied</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#bigText</IRI>
+        <Literal>A string of Rich Text characters up to 65,536 characters in length.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#geoPoint</IRI>
+        <Literal>Data representing a longitude and latitude pair on the surface of a body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#multiSelect</IRI>
+        <Literal>Data representing choices made from set of defined options, where the selection of one or more options is permitted. A multiselect must contain a minimum of two options. A Multiselect will be implemented as either a Text or a Number data type, depending on the character content of the options. All options within the set must be of the same data type (e.g., having a set containing both Text data type and Number data type is not permitted).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#quality</IRI>
+        <Literal>Data representing the quality (the goodness) of an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#text</IRI>
+        <Literal>A string of ASCII characters, such as a single character, a word, or multiple words up to 256 characters in length.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#userName</IRI>
+        <Literal>Data representing the names (or usernames) of individuals assigned to a project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Action</IRI>
+        <Literal>An Action entity specifies the mechanism by which inputs are transformed into outputs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActionTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Actual_Result</IRI>
+        <Literal>Actual Results represents the results that are captured after executing a Test Case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Address</IRI>
+        <Literal>Address represents this Location&apos;s complete address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Altitude</IRI>
+        <Literal>Altitude represents the distance above the surface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Amount</IRI>
+        <Literal>Amount represents this Cost&apos;s value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Apoapsis</IRI>
+        <Literal>Apoapsis represents the point of greatest distance from the celestial body being orbited. For Earth, the term is apogee. For the Sun the term commonly used is aphelion. The Apoapsis must be specified with the Periapsis to characterize the orbital ellipse shape.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Argument_of_Periapsis</IRI>
+        <Literal>Argument of Periapsis represents the angle between the Periapsis and the ascending node as measured in the orbital plane in the direction of motion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Artifact</IRI>
+        <Literal>An Artifact entity specifies a document or other source of information that is referenced by or generated in the knowledgebase.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ArtifactTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Asset</IRI>
+        <Literal>An Asset entity specifies an object, person, or organization that performs Actions, such as a system, subsystem, component, or element.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AssetTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Assumptions</IRI>
+        <Literal>Assumptions represents facts that are used as a basis for this Decision. These assumptions can be taken for granted by the decision maker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Capacity</IRI>
+        <Literal>Capacity represents the maximum rate supported by the Conduit. (Used in simulation as to add time delay by dividing the Input/Output size with the capacity value.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Category</IRI>
+        <Literal>Category represents the part of the lifecycle for which the money is used (commonly called Color of Money). This matches the Federal Government (DoD) cost phases.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Characteristic</IRI>
+        <Literal>A Characteristic entity specifies properties of an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CharacteristicTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Clear</IRI>
+        <Literal>Clear represents if this Requirement is unambiguous and not confusing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Complete</IRI>
+        <Literal>Complete represents if this Requirement expresses a whole idea.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Conduit</IRI>
+        <Literal>A Conduit entity specifies the connection between Assets and has capacity and latency, which carries an Input/Output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConduitTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Connection</IRI>
+        <Literal>A Connection entity specifies the mechanism relating Assets. This is an abstract class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Consequence</IRI>
+        <Literal>Consequence represents the level of effect from this Risk occurring. Integer values from 0 to 100 are commonly used or a % datatype can be added.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Consequence_Description</IRI>
+        <Literal>Consequence Description represents the result of this Risk occurring.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Consistent</IRI>
+        <Literal>Consistent represents if this Requirement is not in conflict with other requirements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contract_Type</IRI>
+        <Literal>Contract Type represents this Cost way to identify the reimbursement structure (i.e. CPFF vs T&amp;M).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Coordinates</IRI>
+        <Literal>Coordinates represents the coordinate points for this Location (GPS or other system). The value will require geo-coordinates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Correct</IRI>
+        <Literal>Correct represents if this Requirement describes the user&apos;s true intent and is legally possible.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Cost</IRI>
+        <Literal>A Cost entity specifies the outlay or expenditure (as of effort or sacrifice) made to achieve an objective associated with another entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CostTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Date_Published</IRI>
+        <Literal>Date Published represents the date when this Artifact was accessed (webpage), published, or uploaded to the knowledgebase.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Decision</IRI>
+        <Literal>A Decision entity specifies a challenge and its resolution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Description</IRI>
+        <Literal>Description captures the text needed to describe this element.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Design</IRI>
+        <Literal>Design represents if this Requirement does not impose a specific solution on design; says &quot;what&quot;, not &quot;how.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Direction</IRI>
+        <Literal>Direction represents the flow of data on this port.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Duration</IRI>
+        <Literal>Duration represents the period of time this Action occurs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Eccentricity</IRI>
+        <Literal>Eccentricity represents the amount the orbit deviates from a perfect circle (0 being perfectly circular and 1 is a parabola - no longer a closed orbit). The Eccentricity must be specified with the Semimajor axis to characterize the orbital ellipse shape.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Equation</IRI>
+        <Literal>An Equation entity specifies an equation (mathematical or logical) that can be used to describe a part of the model. Used as part of the SysML extension in LML v. 1.1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Equation_Value</IRI>
+        <Literal>Value represents this Equation&apos;s text.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Expected_Result</IRI>
+        <Literal>Expected Result represents the result expected when executing this Test Case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Feasible</IRI>
+        <Literal>Feasible represents if this Requirement is able to be implemented with existing technology, and within cost and schedule.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#File</IRI>
+        <Literal>The File that represents this Artifact. Used to trace to the storgae location of the electronic file.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Improvement_Direction</IRI>
+        <Literal>Improvement Direction represents the direction in that metric improvement occurs. It is the direction from the Threshold Value to the Objective Value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Inclination</IRI>
+        <Literal>Inclination represents the angle between the orbital plane and a reference plane, such as the equatorial plane for Earth. The Inclination must be specified with the Longitude of Ascending Node to characterize the orbital plane.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Initial_Amount</IRI>
+        <Literal>Initial Amount represents this Resource&apos;s starting amount.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Justification</IRI>
+        <Literal>Justification represents the reason and context for making this Decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Latency</IRI>
+        <Literal>Latency represents the time required to transmit the information or Input/Output entity over this Conduit. This value does not factor in any delays due to capacity limitations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Location</IRI>
+        <Literal>A Location entity specifies where an entity resides.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Logical</IRI>
+        <Literal>A Logical entity specifies relationship between Assets. It is primarily used in database schema development and entity-relationship diagrams.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Longitude_of_Ascending_Node</IRI>
+        <Literal>Longitude of Ascending Node represents the angle from the Origin of Longitude to the ascending node, measured in the Reference Plane. For the Earth, the origin of longitude is typically the Prime Meridian. The Longitude of Ascending Node must be specified with the Inclination to characterize the orbital plane.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Maximum_Amount</IRI>
+        <Literal>Maximum Amount represents this Resource&apos;s maximum amount allowed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Mean_Anomaly</IRI>
+        <Literal>Mean Anomaly represents the proportion of orbital area swept since the last Periapsis at the specified time. It is used to define the position of the orbiting Asset along the orbital ellipse.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Measure</IRI>
+        <Literal>A Measure entity specifies properties of measurements and measuring methodologies, including metrics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeasureTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Minimum_Amount</IRI>
+        <Literal>Minimum Amount represents this Resource&apos;s minimum amount allowed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Modular</IRI>
+        <Literal>Modular represents if this Requirement can be changed without excessive impact on other requirements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Name</IRI>
+        <Literal>Name designates the particular instance of an entity called element.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Number</IRI>
+        <Literal>Number provides the element’s place in a hierarchy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Objective_Value</IRI>
+        <Literal>Objective Value represents the goal for this Measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Orbital</IRI>
+        <Literal>An Orbital entity specifies a location along an orbit around a celestial body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Origin_of_Longitude</IRI>
+        <Literal>Origin of Longitude represents the reference meridian from where the Longitude of Ascending Node will be calculated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Percent_Complete</IRI>
+        <Literal>Percent Complete represents the percentage this Action is complete. Integer values from 0 to 100 are commonly used or a % datatype can be added.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Periapsis</IRI>
+        <Literal>Periapsis represents the point of closest distance from the celestial body being orbited. For Earth, the term is perigee. For the Sun the term commonly used is perihelion. The Periapsis must be specified with the Apoapsis to characterize the orbital ellipse shape.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Physical</IRI>
+        <Literal>A Physical entity specifies a location on or above the surface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Port</IRI>
+        <Literal>An interaction point of a block, specifying the input and output flow. Used as part of the SysML extension in LML v. 1.1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Probability</IRI>
+        <Literal>Probability represents the chance that this Risk will occur. Integer values from 0 to 100 are commonly used or a % datatype can be added.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Projected_Value</IRI>
+        <Literal>Projected Value represents this Measure&apos;s expected value to be achieved with existing resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Rate</IRI>
+        <Literal>Rate represents this Cost&apos;s billing rate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Rationale</IRI>
+        <Literal>Rationale provides a place to capture the reason(s) behind this Requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Reference_Plane</IRI>
+        <Literal>Reference Plane represents the reference plane from where the Inclination angle will be calculated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Requirement</IRI>
+        <Literal>A Requirement entity identifies a capability, characteristic, or quality factor of a system that must exist for the system to have value and utility to the user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RequirementTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Resource</IRI>
+        <Literal>A Resource entity specifies a consumable or producible Asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Risk</IRI>
+        <Literal>A Risk entity specifies the combined probability and consequence in achieving objectives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RiskTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Risk_Status</IRI>
+        <Literal>Status represents the current state of this Risk.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Semimajor_Axis</IRI>
+        <Literal>Semimajor Axis represents the one half of the length of the longest diameter of the orbital ellipse. The Semimajor axis must be specified with the Eccentricity to characterize the orbital ellipse shape.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Set_Up</IRI>
+        <Literal>Set Up represents the prerequisites that must be fulfilled before executing this Test Case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Size</IRI>
+        <Literal>Size represents the amount or proportion of this Input/Output, such as 100 as in 100 Gigabytes or number of entities (e.g. 10 as in 10 tokens).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Start</IRI>
+        <Literal>Start represents the time when this Action begins</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Statement</IRI>
+        <Literal>A Statement entity specifies text referenced by the knowledgebase and usually contain in an Artifact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StatementTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TC_Status</IRI>
+        <Literal>Status represents the current state of this Test Case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Test_Case</IRI>
+        <Literal>A Test Case entity represents a set of conditions utilized to determine whether a system works as intended. Extension to LML for Innoslate&apos;s Test Center, which enhanced the support for the V&amp;V phase of the lifecycle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Threshold_Value</IRI>
+        <Literal>Threshold Value represents the minimum acceptable value for this Measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Time</IRI>
+        <Literal>A Time entity specifies a point or period when something occurs or during which an action, asset, process, or condition exists or continues.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TimeTypes</IRI>
+        <Literal>Labels list the types of the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Time_Duration</IRI>
+        <Literal>Duration represents the period of time this Time occurs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Time_Start</IRI>
+        <Literal>Start represents the time when this Time begins.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Tolerance</IRI>
+        <Literal>Tolerance represents the percentage of the value that forms the positive and negative tolerance bands. Tolerance is used when Value represents the planned measure value at a given time. Integer values from 0 to 100 are commonly used or a % datatype can be added.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Traceable</IRI>
+        <Literal>Traceable represents if this Requirement is uniquely identified, and able to be tracked to predecessor and successor lifecycle items/objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Units</IRI>
+        <Literal>Units represents this entity&apos;s units used to measure the amounts, such as each or tons.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Verifiable</IRI>
+        <Literal>Verifiable represents if this Requirement is provable (within realistic cost and schedule) that the system meets the requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Virtual</IRI>
+        <Literal>A Virtual entity specifies a location within a digital network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alternative</IRI>
+        <Literal>Attribute on relationship: Choice; isDefinedBy: Choice represents if this alternative was the choice selected; Type: boolean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#alternative</IRI>
+        <Literal>Alternative identifies the Statement that is a potential choice for this Decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alternative_of</IRI>
+        <Literal>Attribute on relationship: Choice; isDefinedBy: Choice represents if this alternative was the choice selected; Type: boolean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#alternative_of</IRI>
+        <Literal>Alternative of identifies the Decision that has this Statement as a potential choice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#caused_by</IRI>
+        <Literal>Caused by identifies the entity that this Risk results.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#causes</IRI>
+        <Literal>Causes identifies the Risk resulting from this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#connected_by</IRI>
+        <Literal>Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#connected_by</IRI>
+        <Literal>Attribute on relationship: Origin; isDefinedBy: Origin represents if the Asset is the origin of the Connector. This attribute enables unidirectional (one or the other Asset&apos;s relationship origin is False), in additional to the default bi-directional flow (both origins are set to True as a default); Type: boolean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#connected_by</IRI>
+        <Literal>Connected by identifies the Connector that adjoins this Asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#connects_to</IRI>
+        <Literal>Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#connects_to</IRI>
+        <Literal>Attribute on relationship: Origin; isDefinedBy: Origin represents if the Asset is the origin of the Connector. This attribute enables unidirectional (one or the other Asset&apos;s relationship origin is False), in additional to the default bi-directional flow (both origins are set to True as a default); Type: boolean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#connects_to</IRI>
+        <Literal>Connects to identifies the Asset that this Connector adjoins</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#consumed_by</IRI>
+        <Literal>Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#consumed_by</IRI>
+        <Literal>Consumed by identifies the Action that uses this Resource. After the Action is completed the amount consumed is not returned to the Resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#consumes</IRI>
+        <Literal>Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#consumes</IRI>
+        <Literal>Consumes identifies the Resource that this Action uses. After this Action is completed the amount consumed is not returned to the Resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#copied_by</IRI>
+        <Literal>Copied by identifies the Requirement that is a clone of this Requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#copies</IRI>
+        <Literal>Copies identifies the Requirement that this Requirement clones.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#date_resolved_by</IRI>
+        <Literal>Date resolved by identifies the Time when this Decision was closed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#date_resolves</IRI>
+        <Literal>Date resolves identifies the Decision that is closed at this Time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#decided_by</IRI>
+        <Literal>Decided by identifies the Decision scheduled for closure at this Time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#decision_due</IRI>
+        <Literal>Decision due identifies the Time when this Decision is scheduled to be closed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#decomposed_by</IRI>
+        <Literal>Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#decomposed_by</IRI>
+        <Literal>Decomposed by identifies the children of this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#decomposes</IRI>
+        <Literal>Attribute on relationship: Multiplicity; isDefinedBy: Multiplicity represents if this connection has multiple connections to the Asset; Type: Multiplicity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#decomposes</IRI>
+        <Literal>Decomposes identifies the parent of this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#defined_protocol_by</IRI>
+        <Literal>Defined protocol by identifies the Artifact that contains the standard used by this Conduit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#defines_protocol_for</IRI>
+        <Literal>Defines protocol for identifies the Connector that uses the standard identified in this Artifact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depends_on</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#depends_on</IRI>
+        <Literal>Depends on identifies the Action that this Action has a dependency on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#derived_by</IRI>
+        <Literal>Derived by identifies the Requirement that is developed from this Requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#derives</IRI>
+        <Literal>Derives identifies the Requirement that this Requirement develop from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#enabled_by</IRI>
+        <Literal>Enabled by identifies the entity that empowers this Decision to be made.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#enables</IRI>
+        <Literal>Enables identifies the Decision that is empowered from this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#equation_for</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#equation_for</IRI>
+        <Literal>Equation for identifies the entity that this Equation represents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#equation_of</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#equation_of</IRI>
+        <Literal>Equation of identifies the Equation that represents this entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#extend</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#extend</IRI>
+        <Literal>Extend identifies the Action (use case) that is added to this Action (use case).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#extended_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#extended_by</IRI>
+        <Literal>Extended by identifies the Action (use case) that is added from this Action (use case).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fetched_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#fetched_by</IRI>
+        <Literal>Fetched by identifies the Action that this State Characteristic is received by.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fetches</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#fetches</IRI>
+        <Literal>Fetches identifies the State Characteristic that this Action receives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#generated_by</IRI>
+        <Literal>Generated by identifies the Action or Characteristic that this Input/Output or Action was transformed by.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#generates</IRI>
+        <Literal>Generates identifies the Input/Output or Action that this Action or Characteristic transforms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_dependent</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#has_dependent</IRI>
+        <Literal>Has Dependent identifies the Action that depends on this Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#has_variable</IRI>
+        <Literal>Has variable identifies the Characteristic that is represented in this Equation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#include</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#include</IRI>
+        <Literal>Include identifies the Action (use case) that is added to this Action (use case).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#included_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#included_by</IRI>
+        <Literal>Included by identifies the Action (use case) that is added from this Action (use case).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#incurred_by</IRI>
+        <Literal>Incurred by identifies the entity that has this Cost value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#incurs</IRI>
+        <Literal>Incurs identifies the Cost value for this entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#joined_by</IRI>
+        <Literal>Attribute on relationship: Bidirectional; isDefinedBy: Bidirectional represents if the connection between two connectors is bidirectional.  If the connector is not bidirectional the connector that has the relation joins is the start and the connector with joined by is the end; Type: boolean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#joined_by</IRI>
+        <Literal>Joined by identifies the Connection that connects to this Connection.  Joined by implies the end of the relationship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#joins</IRI>
+        <Literal>Attribute on relationship: Bidirectional; isDefinedBy: Bidirectional represents if the connection between two connectors is bidirectional.  If the connector is not bidirectional the connector that has the relation joins is the start and the connector with joined by is the end; Type: boolean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#joins</IRI>
+        <Literal>Joins identifies the Connection that is connected to this Connection.  Joins implies the start of this relationship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#located_at</IRI>
+        <Literal>Located at identifies the Location where this entity exists.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#locates</IRI>
+        <Literal>Locates identifies an entity that exists at this Location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#made</IRI>
+        <Literal>Made identifies the Decision that this Asset decided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#made_by</IRI>
+        <Literal>Made by identifies the Asset that decided this Decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#mitigated_by</IRI>
+        <Literal>Mitigated by identifies the entity that contains the plan to alleviate this Risk.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#mitigates</IRI>
+        <Literal>Mitigates identifies the Risk that this entity plan alleviates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#occurred_by</IRI>
+        <Literal>Occurred by identifies the entity that happens at this Time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#occurs</IRI>
+        <Literal>Occurs identifies the Time (or timespan) this entity happens.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#orbited_by</IRI>
+        <Literal>Orbited by identifies the Asset that revolves around this Asset, such as the Earth is orbited by the Moon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#orbits</IRI>
+        <Literal>Orbits identifies the Asset that this Asset revolves around, such as the Moon orbits the Earth.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#performed_by</IRI>
+        <Literal>Performed by identifies the Asset that executes this Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#performs</IRI>
+        <Literal>Performs identifies the Action that is executed by this Asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#produced_by</IRI>
+        <Literal>Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#produced_by</IRI>
+        <Literal>Produced by identifies the Action that creates this Resource. Resources are produced when the execution of the action completes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#produces</IRI>
+        <Literal>Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#produces</IRI>
+        <Literal>Produces identifies the Resource that is created by this Action. Resources are produced when the execution of the action completes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pushed_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#pushed_by</IRI>
+        <Literal>Pushed by identifies the State Characteristic that this Action is generated from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pushes</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#pushes</IRI>
+        <Literal>Pushes identifies the Action that this State Characteristic generates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#received_by</IRI>
+        <Literal>Attribute on relationship: Trigger; isDescBy: Trigger represents this relation as an enabling requirement for the Action.  An Action begins execution when it has received control enablement, all of its triggers have arrived, and its necessary resources are available; Type: boolean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#received_by</IRI>
+        <Literal>Received by identifies the Action or Characteristic that takes in this Input/Output or Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#receives</IRI>
+        <Literal>Attribute on relationship: Trigger; isDescBy: Trigger represents this relation as an enabling requirement for the Action.  An Action begins execution when it has received control enablement, all of its triggers have arrived, and its necessary resources are available; Type: boolean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#receives</IRI>
+        <Literal>Receives identifies the Input/Output or Action that is taken in by this Action or Characteristic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#references</IRI>
+        <Literal>References identifies the Artifact that specifies and/or enhances the definition of this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#references_by</IRI>
+        <Literal>Referenced by identifies the the entity that specified and/or enhanced its definition by this Artifact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refined_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#refined_by</IRI>
+        <Literal>Refined by identifies the Requirement that clarifies this Requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refines</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#refines</IRI>
+        <Literal>Refines identifies the Requirement that this Requirement clarifies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#related_to</IRI>
+        <Literal>Attribute on relationship: Context; isDefinedBy: Context represents a description of this relation; Type: string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#related_to</IRI>
+        <Literal>Related to identifies the entity that ties in a peer-to-peer way with this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#relates</IRI>
+        <Literal>Attribute on relationship: Context; isDefinedBy: Context represents a description of this relation; Type: string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#relates</IRI>
+        <Literal>Relates identifies the peer-to-peer entity that is tied to this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#represented_in</IRI>
+        <Literal>Represented in identifies the Asset who’s diagrams include this Asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#represents</IRI>
+        <Literal>Represents identities the Asset that is included in this Asset’s diagrams.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#resolved_by</IRI>
+        <Literal>Resolved by identifies the entity that closes this Risk.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#resolves</IRI>
+        <Literal>Resolves identifies the Risk that is closed by this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#responded_by</IRI>
+        <Literal>Attribute on relationship: Responsibility; isDefinedBy: Responsibility represents the Asset that has the responsibility for resolving the Decision; Type: {&quot;Primary&quot;, &quot;Secondary&quot;}</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#responded_by</IRI>
+        <Literal>Responded by identifies the Asset (usually a person or organization) that acts on this Decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#responds_to</IRI>
+        <Literal>Attribute on relationship: Responsibility; isDefinedBy: Responsibility represents the Asset that has the responsibility for resolving the Decision; Type: {&quot;Primary&quot;, &quot;Secondary&quot;}</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#responds_to</IRI>
+        <Literal>Responds to identifies the Decision that is acted on by this Asset (usually a person or organization).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#result_of</IRI>
+        <Literal>Result of identifies the entity that caused this Decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#results_in</IRI>
+        <Literal>Results in identifies the Decision that is caused by this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#satisfied_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#satisfied_by</IRI>
+        <Literal>Satisfied by identifies the entity that fulfills this Requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#satisfies</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#satisfies</IRI>
+        <Literal>Satisfies identifies the Requirement that is fulfilled by this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#seized_by</IRI>
+        <Literal>Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#seized_by</IRI>
+        <Literal>Seized by identifies the Action that uses this Resource. After the Action has completed this Resource is released for use by other Actions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#seizes</IRI>
+        <Literal>Attribute on relationship: Amount; isDefinedBy: Amount represents how much of the resource is consumed by the Action. Units are relative to the units selected for the resource.; Type: Number (float)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#seizes</IRI>
+        <Literal>Seizes identifies the Resource that this Action uses. After this Action has completed the Resource is released for use by other Actions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#source_of</IRI>
+        <Literal>Source of identifies the Statement that is contained in this Artifact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sourced_by</IRI>
+        <Literal>Sourced by identifies the Artifact that contains this Statement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#specified_by</IRI>
+        <Literal>Specified by identifies a Characteristic that provides further information about this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#specifies</IRI>
+        <Literal>Specifies identifies an entity that this Characteristic provides further information about.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#traced_from</IRI>
+        <Literal>Traced from identifies a Statement that accredited this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#traced_to</IRI>
+        <Literal>Traced to identifies an entity that is accredited to this Statement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#transferred_by</IRI>
+        <Literal>Transferred by identifies the Conduit that passes this Input/Output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#transfers</IRI>
+        <Literal>Transfers identifies the Input/Output that is passed by this Conduit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#variable_of</IRI>
+        <Literal>Variable of identifies the Equation that this Characteristic is represented in.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#verified_by</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#verified_by</IRI>
+        <Literal>Verified by identifies the entity that supports this Requirement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#verifies</IRI>
+        <Literal>Added to support SysML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#verifies</IRI>
+        <Literal>Verifies identifies the Requirement that is supported by this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Input/Output</IRI>
+        <Literal>An Input/Output entity specifies the information, data, or object input to, triggers, or output from an Action.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
