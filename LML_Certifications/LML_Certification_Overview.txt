@@ -1,6 +1,6 @@
-LML Certification Overview 
+# LML Certification Overview 
 
-Who should pursue LML Certification?
+## Who should pursue LML Certification?
 - Systems Engineers
 - System Analysts
 - Product Engineers
@@ -13,7 +13,7 @@ Who should pursue LML Certification?
 - Risk Analysts
 - Software Engineers
 
-Ideal for working professionals looking to:
+## Ideal for working professionals looking to:
 - Understand the system engineering lifecycle
 - Utilize model-based systems engineering techniques 
 - Increase speed of product releases
