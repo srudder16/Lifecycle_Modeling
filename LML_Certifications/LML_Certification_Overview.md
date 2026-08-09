@@ -30,9 +30,10 @@ Based on the LML v2.0 specification [https://www.lifecyclemodeling.org/hubfs/LML
 ## How to get Certified <!-- This needs to be considered -->
 
 ## Training Providers
-- SPEC Innovations [https://specinnovations.com/#]
 - Enola Technologies, LLC [https://enola.com/]
 - Lifecycle Model-based Systems Engineering (LMBSE) [https://www.lmbse.com/]
+- SPEC Innovations [https://specinnovations.com/#]
+- Teaching Science and Technology, Inc (TSTI) [https://www.tsti.net/]
 
 ## Additional Resources
 Vaneman, W. K. (2016). Enhancing model-based systems engineering with the Lifecycle Modeling Language. 2016 Annual IEEE Systems Conference (SysCon), 1–7. [https://doi.org/10.1109/SYSCON.2016.7490581] [https://www.academia.edu/59508641/Enhancing_model_based_systems_engineering_with_the_Lifecycle_Modeling_Language]
